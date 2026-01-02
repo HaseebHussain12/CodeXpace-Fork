@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import logo1 from "../assets/logo1.png";
 
 const servicesList = [
   { name: "Web Development", slug: "web-development" },
@@ -77,6 +78,22 @@ export default function Header() {
     }
   };
 
+  const handleContactUsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (pathname === "/") {
+      // If already on home page, scroll to contact form
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: "smooth", block: "end" });
+      }
+    } else {
+      // If on another page, navigate to home with hash
+      router.push("/#contact-form");
+    }
+  };
+
+
   return (
     <header className="relative z-50 backdrop-blur-2xl">
       <div
@@ -89,14 +106,15 @@ export default function Header() {
       <nav className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.png"
+              src={logo1}
               alt="CodeXpace Logo"
-              width={105}
-              height={30}
+              width={40}
+              height={20}
               className="object-contain"
             />
+            <span className="text-white font-semibold text-sm">CodeXpace LLC</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -108,7 +126,7 @@ export default function Header() {
             >
               Home
             </Link>
-            {/* <Link
+            <Link
               href="/about"
               className={`font-semibold text-sm transition-colors ${
                 isActive("/about")
@@ -117,7 +135,7 @@ export default function Header() {
               }`}
             >
               About Us
-            </Link> */}
+            </Link>
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
@@ -186,6 +204,13 @@ export default function Header() {
               }`}
             >
               Careers
+            </Link>
+            <Link
+              href="/#contact-form"
+              onClick={handleContactUsClick}
+              className="font-semibold text-sm transition-colors text-white hover:text-red-400"
+            >
+              Contact Us
             </Link>
           </div>
 
