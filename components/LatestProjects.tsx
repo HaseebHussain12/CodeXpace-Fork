@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import codaImage from "../assets/projects/Coda.png";
 import dramaPopImage from "../assets/projects/DramaPop.png";
 import HT from "../assets/projects/HT.png";
@@ -255,9 +256,14 @@ export default function LatestProjects() {
                 <p className="text-sm md:text-base font-normal text-gray-300 leading-relaxed">
                   {projects[selectedProject].description}
                 </p>
-                {/* <button className="w-full md:w-auto px-6 py-2.5 bg-transparent border border-red-500/60 text-red-400 rounded-lg font-medium hover:bg-red-500/10 hover:border-red-500 transition-all duration-300 text-sm">
-                  View project
-                </button> */}
+                {projects[selectedProject].id === "Forward-Thinking-Fitness" && (
+                  <Link
+                    href="/portfolio/ftf"
+                    className="inline-block w-full md:w-auto px-6 py-2.5 bg-transparent border border-red-500/60 text-red-400 rounded-lg font-medium hover:bg-red-500/10 hover:border-red-500 transition-all duration-300 text-sm text-center"
+                  >
+                    See Details
+                  </Link>
+                )}
               </div>
 
               {/* Images horizontally aligned with text - Made smaller, aligned to top */}

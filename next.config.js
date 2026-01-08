@@ -9,6 +9,10 @@ const nextConfig = {
       },
     ],
   },
+  // Disable automatic scroll restoration
+  experimental: {
+    scrollRestoration: false,
+  },
 }
 
 module.exports = nextConfig

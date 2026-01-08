@@ -14,10 +14,16 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   useEffect(() => {
+    // Scroll to top on mount (unless there's a hash)
+    const hash = window.location.hash;
+    if (!hash || hash !== '#contact-form') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+
     // Handle hash navigation for contact form
     const handleHashScroll = () => {
-      const hash = window.location.hash;
-      if (hash === '#contact-form') {
+      const currentHash = window.location.hash;
+      if (currentHash === '#contact-form') {
         // Small delay to ensure page is fully rendered
         setTimeout(() => {
           const contactForm = document.getElementById('contact-form');
@@ -25,6 +31,9 @@ export default function Home() {
             contactForm.scrollIntoView({ behavior: 'smooth', block: 'end' });
           }
         }, 300);
+      } else {
+        // If no hash or different hash, scroll to top
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       }
     };
 

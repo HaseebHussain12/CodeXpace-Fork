@@ -1,0 +1,1763 @@
+.ftf-portfolio-wrapper .app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px)  {
+
+  .ftf-portfolio-wrapper .app-wrapper {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Horizontal Scroll Container */
+.ftf-portfolio-wrapper .horizontal-scroll-container {
+  width: 100%;
+  height: 680px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.ftf-portfolio-wrapper .horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.ftf-portfolio-wrapper .horizontal-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ftf-portfolio-wrapper .section-view {
+  min-width: 100vw;
+  width: 100vw;
+  height: 680px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Next Button */
+.ftf-portfolio-wrapper .next-button {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(24, 188, 180, 0.6);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: #18bcb4;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ftf-portfolio-wrapper .next-button:hover {
+  background: rgba(24, 188, 180, 0.2);
+  border-color: rgba(24, 188, 180, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(24, 188, 180, 0.4);
+}
+
+.ftf-portfolio-wrapper .app.light-mode .next-button {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(24, 188, 180, 0.8);
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app.light-mode .next-button:hover {
+  background: rgba(24, 188, 180, 0.15);
+  border-color: rgba(24, 188, 180, 1);
+}
+
+
+.ftf-portfolio-wrapper .app {
+  width: 100vw;
+  height: 800px;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color 0.5s ease, background-image 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.75) 60%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.2) 90%,
+    rgba(0, 0, 0, 0.1) 95%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+/* Light Mode Gradient */
+.ftf-portfolio-wrapper .app.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(200, 200, 200, 0.85) 0%,
+    rgba(200, 200, 200, 0.85) 50%,
+    rgba(200, 200, 200, 0.75) 60%,
+    rgba(200, 200, 200, 0.6) 70%,
+    rgba(200, 200, 200, 0.4) 80%,
+    rgba(200, 200, 200, 0.2) 90%,
+    rgba(200, 200, 200, 0.1) 95%,
+    transparent 100%
+  );
+}
+
+/* Theme Toggle Button */
+.ftf-portfolio-wrapper .theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ftf-portfolio-wrapper .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.ftf-portfolio-wrapper .app.light-mode .theme-toggle {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.ftf-portfolio-wrapper .app.light-mode .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Second Page - Primary Color Background */
+.ftf-portfolio-wrapper .app-page-2 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+/* Light Mode - Second Page */
+.ftf-portfolio-wrapper .app-page-2.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-2.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-2 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+}
+
+/* Third Page - Primary Color Background (Flipped Layout) */
+.ftf-portfolio-wrapper .app-page-3 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+/* Light Mode - Third Page */
+.ftf-portfolio-wrapper .app-page-3.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-3.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+/* Fourth Page - Video on Left, Text on Right */
+.ftf-portfolio-wrapper .app-page-4 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-4 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Fourth Page */
+.ftf-portfolio-wrapper .app-page-4.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-4.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-4.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-4.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Fifth Page - Text on Left, Video on Right (Like Section 3) */
+.ftf-portfolio-wrapper .app-page-5 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-5 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+}
+
+/* Light Mode - Fifth Page */
+.ftf-portfolio-wrapper .app-page-5.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-5.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-5.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-5.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Sixth Page - Video on Left, Text on Right (Like Section 4) */
+.ftf-portfolio-wrapper .app-page-6 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-6 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Sixth Page */
+.ftf-portfolio-wrapper .app-page-6.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-6.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-6.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-6.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Seventh Page - Text on Left, Video on Right (Like Section 5) */
+.ftf-portfolio-wrapper .app-page-7 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-7 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Seventh Page */
+.ftf-portfolio-wrapper .app-page-7.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-7.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-7.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-7.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Eighth Page - Video on Left, Text on Right (Like Section 6) */
+.ftf-portfolio-wrapper .app-page-8 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-8::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-8 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Eighth Page */
+.ftf-portfolio-wrapper .app-page-8.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-8.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-8.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-8.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Ninth Page - Text on Left, Video on Right (Like Section 7) */
+.ftf-portfolio-wrapper .app-page-9 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-9::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-9 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Ninth Page */
+.ftf-portfolio-wrapper .app-page-9.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-9.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-9.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-9.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Section 9 - Add margin-left to video section */
+.ftf-portfolio-wrapper .app-page-9 .screens-gallery-right {
+  margin-left: 150px;
+}
+
+/* Tenth Page - Video on Left, Text on Right (Like Section 8) */
+.ftf-portfolio-wrapper .app-page-10 {
+  background-color: #000000;
+  background-image: none;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-10::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+.ftf-portfolio-wrapper .app-page-10 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 60px;
+  padding-right: 100px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Light Mode - Tenth Page */
+.ftf-portfolio-wrapper .app-page-10.light-mode {
+  background-color: #f5f5f5;
+}
+
+.ftf-portfolio-wrapper .app-page-10.light-mode::before {
+  background: linear-gradient(
+    to right,
+    rgba(24, 188, 180, 0.15) 0%,
+    rgba(218, 36, 149, 0.15) 100%
+  );
+}
+
+.ftf-portfolio-wrapper .app-page-10.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-10.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.ftf-portfolio-wrapper .app-page-3 .container {
+  height: 680px;
+  overflow: visible;
+  padding-left: 100px;
+  padding-right: 60px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+
+.ftf-portfolio-wrapper .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 100px;
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Left Side - Branding Section */
+.ftf-portfolio-wrapper .branding-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 2;
+  width: calc(50vw - 200px);
+  max-width: calc(50vw - 200px);
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.ftf-portfolio-wrapper .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+
+.ftf-portfolio-wrapper .logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ftf-portfolio-wrapper .app-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.ftf-portfolio-wrapper .brand-name {
+  font-size: 52px;
+  font-weight: 800;
+  color: #18bcb4;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Light Mode - Main Heading Color */
+.ftf-portfolio-wrapper .app.light-mode .brand-name {
+  color: #000000;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.ftf-portfolio-wrapper .separator {
+  width: 2px;
+  height: 120px;
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+
+.ftf-portfolio-wrapper .info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.ftf-portfolio-wrapper .figma-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ftf-portfolio-wrapper .figma-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 50%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ftf-portfolio-wrapper .figma-shape {
+  position: absolute;
+  border-radius: 50% 0 50% 50%;
+}
+
+.ftf-portfolio-wrapper .shape-1 {
+  width: 30px;
+  height: 30px;
+  background: #f24e1e;
+  top: 0;
+  left: 0;
+  border-radius: 30px 0 30px 0;
+}
+
+.ftf-portfolio-wrapper .shape-2 {
+  width: 30px;
+  height: 30px;
+  background: #a259ff;
+  top: 0;
+  right: 0;
+  border-radius: 0 30px 0 30px;
+}
+
+.ftf-portfolio-wrapper .shape-3 {
+  width: 30px;
+  height: 30px;
+  background: #0acf83;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px 0 30px 0;
+}
+
+.ftf-portfolio-wrapper .shape-4 {
+  width: 30px;
+  height: 30px;
+  background: #1abcfe;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 30px 0 30px;
+}
+
+.ftf-portfolio-wrapper .design-title {
+  font-size: 64px;
+  font-weight: 900;
+  color: #18bcb4;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  transition: color 0.5s ease;
+  white-space: nowrap;
+}
+
+/* Light Mode - Design Title */
+.ftf-portfolio-wrapper .app-page-2.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .app-page-3.light-mode .design-title {
+  color: #18bcb4;
+}
+
+.ftf-portfolio-wrapper .screen-count {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Light Mode - Slogan Color */
+.ftf-portfolio-wrapper .app.light-mode .screen-count {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Right Side - Phone Screens Gallery */
+.ftf-portfolio-wrapper .screens-gallery {
+  width: 45%;
+  height: 100%;
+  padding-left: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Phone Screens Stack - Horizontal Overlapping Effect */
+.ftf-portfolio-wrapper .phone-screens-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  perspective: 1200px;
+  padding-left: 0;
+  overflow: visible;
+  min-width: 800px;
+}
+
+@media (max-width: 1024px)  {
+
+  .ftf-portfolio-wrapper .phone-screens-stack {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 768px)  {
+
+  .ftf-portfolio-wrapper .phone-screens-stack {
+    min-width: unset;
+  }
+}
+
+.ftf-portfolio-wrapper .phone-screen {
+  position: relative;
+  width: 240px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, z-index 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  margin-left: -80px;
+  pointer-events: auto;
+}
+
+.ftf-portfolio-wrapper .phone-screen:first-child {
+  margin-left: 0;
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(1) {
+  transform: rotateY(-12deg) rotateZ(-3deg) scale(0.85);
+  z-index: 1;
+  opacity: 1;
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(2) {
+  transform: rotateY(-6deg) rotateZ(-2deg) scale(0.9);
+  z-index: 2;
+  opacity: 1;
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(3) {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1);
+  z-index: 5;
+  opacity: 1;
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(4) {
+  transform: rotateY(6deg) rotateZ(2deg) scale(0.9);
+  z-index: 2;
+  opacity: 1;
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(5) {
+  transform: rotateY(12deg) rotateZ(3deg) scale(0.85);
+  z-index: 1;
+  opacity: 1;
+  position: relative;
+  will-change: transform, z-index;
+}
+
+.ftf-portfolio-wrapper .phone-screen:hover {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1.08) !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  box-shadow: 0 30px 80px rgba(24, 188, 180, 0.5), 0 0 0 8px rgba(24, 188, 180, 0.3);
+}
+
+.ftf-portfolio-wrapper .phone-screen:nth-child(5):hover {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1.08) !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  box-shadow: 0 30px 80px rgba(24, 188, 180, 0.5), 0 0 0 8px rgba(24, 188, 180, 0.3);
+  position: relative;
+}
+
+/* Screens Gallery on Left */
+.ftf-portfolio-wrapper .screens-gallery-left {
+  width: 45%;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Section 2 - Increased gallery width */
+.ftf-portfolio-wrapper .app-page-2 .screens-gallery-left {
+  width: 55%;
+}
+
+/* Branding Section on Right */
+.ftf-portfolio-wrapper .branding-section-right {
+  width: calc(55% - 60px);
+  max-width: calc(55% - 60px);
+  padding-left: 150px;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+@media (max-width: 1400px)  {
+
+  .ftf-portfolio-wrapper .branding-section-right {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* Section 2 - Reduced width for text section */
+.ftf-portfolio-wrapper .app-page-2 .branding-section-right {
+  width: calc(45% - 30px);
+  max-width: calc(45% - 30px);
+  padding-left: 80px;
+  margin-left: 120px;
+}
+
+/* Section 4 - Additional margin right for text */
+.ftf-portfolio-wrapper .app-page-4 .branding-section-right {
+  margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
+}
+
+/* Section 6 - Additional margin right for text */
+.ftf-portfolio-wrapper .app-page-6 .branding-section-right {
+  margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
+}
+
+/* Section 8 - Additional margin right for text */
+.ftf-portfolio-wrapper .app-page-8 .branding-section-right {
+  margin-right: 80px;
+  margin-left: 10px;
+  padding-left: 100px;
+}
+
+/* Section 10 - Additional margin right for text */
+.ftf-portfolio-wrapper .app-page-10 .branding-section-right {
+  margin-right: 80px;
+}
+
+.ftf-portfolio-wrapper .branding-section-right .design-title {
+  font-size: 48px;
+  white-space: nowrap;
+}
+
+/* Section 2 - Allow heading to wrap to 2 lines */
+.ftf-portfolio-wrapper .app-page-2 .branding-section-right .design-title {
+  white-space: normal;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Branding Section on Left (Page 3) */
+.ftf-portfolio-wrapper .branding-section-left {
+  width: calc(55% - 60px);
+  max-width: calc(55% - 60px);
+  padding-right: 0;
+  margin-right: 30px;
+  margin-left: 15px;
+  z-index: 1;
+}
+
+.ftf-portfolio-wrapper .branding-section-left .design-title {
+  font-size: 48px;
+  white-space: nowrap;
+}
+
+/* Screens Gallery on Right (Page 3) */
+.ftf-portfolio-wrapper .screens-gallery-right {
+  width: 45%;
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Video Container for Section 3 and 4 */
+.ftf-portfolio-wrapper .video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+  min-height: 0;
+  flex-shrink: 1;
+  padding: 20px;
+}
+
+.ftf-portfolio-wrapper .screens-gallery-right .video-container {
+  margin-right: 40%;
+}
+
+.ftf-portfolio-wrapper .screens-gallery-left .video-container {
+  margin-left: 40%;
+}
+
+.ftf-portfolio-wrapper .section-video {
+  width: auto;
+  max-width: 500px;
+  max-height: 100%;
+  height: auto;
+  aspect-ratio: 77.6 / 163; /* iPhone 16 Pro Max: 77.6mm wide × 163mm tall */
+  border-radius: 35px; /* iPhone 16 Pro Max rounded corners */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 8px rgba(20, 100, 95, 0.6),
+    0 0 0 12px rgba(20, 100, 95, 0.3),
+    inset 0 0 0 2px rgba(24, 188, 180, 0.3);
+  object-fit: contain;
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+  border: 2px solid rgba(20, 100, 95, 0.8);
+  flex-shrink: 1;
+  transition: box-shadow 0.5s ease, border-color 0.5s ease, background 0.5s ease;
+}
+
+/* iPhone notch simulation */
+.ftf-portfolio-wrapper .section-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000000;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+  pointer-events: none;
+  transition: background 0.5s ease;
+}
+
+/* Light Mode - Video Styling */
+.ftf-portfolio-wrapper .app-page-3.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-4.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-5.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-6.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-7.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-8.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-9.light-mode .section-video,
+.ftf-portfolio-wrapper .app-page-10.light-mode .section-video {
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 8px rgba(0, 0, 0, 0.15),
+    0 0 0 12px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 2px solid rgba(200, 200, 200, 0.5);
+}
+
+.ftf-portfolio-wrapper .app-page-3.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-4.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-5.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-6.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-7.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-8.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-9.light-mode .section-video::before,
+.ftf-portfolio-wrapper .app-page-10.light-mode .section-video::before {
+  background: #ffffff;
+}
+
+/* Features List */
+.ftf-portfolio-wrapper .features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.ftf-portfolio-wrapper .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ftf-portfolio-wrapper .feature-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #18bcb4;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(24, 188, 180, 0.6);
+}
+
+.ftf-portfolio-wrapper .feature-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Light Mode - Feature Text */
+.ftf-portfolio-wrapper .app-page-2.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.ftf-portfolio-wrapper .app-page-3.light-mode .feature-text {
+  color: #1F1D1D;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px)  {
+
+  .ftf-portfolio-wrapper .container {
+    flex-direction: column;
+    padding: 60px 60px;
+    height: 800px;
+    gap: 40px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .app-page-2 .container,
+  .ftf-portfolio-wrapper .app-page-3 .container,
+  .ftf-portfolio-wrapper .app-page-4 .container,
+  .ftf-portfolio-wrapper .app-page-5 .container,
+  .ftf-portfolio-wrapper .app-page-6 .container,
+  .ftf-portfolio-wrapper .app-page-7 .container,
+  .ftf-portfolio-wrapper .app-page-8 .container,
+  .ftf-portfolio-wrapper .app-page-9 .container,
+  .ftf-portfolio-wrapper .app-page-10 .container {
+    height: 680px;
+    gap: 40px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .branding-section {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery-left {
+    width: 100%;
+    padding-right: 0;
+    height: auto;
+  }
+
+  .ftf-portfolio-wrapper .phone-screens-stack {
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen {
+    width: 180px;
+    height: 360px;
+    margin-left: -60px;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:first-child {
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(1) {
+    transform: rotateY(-10deg) rotateZ(-2deg) scale(0.8);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(2) {
+    transform: rotateY(-5deg) rotateZ(-1deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(3) {
+    transform: rotateY(0deg) rotateZ(0deg) scale(0.95);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(4) {
+    transform: rotateY(5deg) rotateZ(1deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(5) {
+    transform: rotateY(10deg) rotateZ(2deg) scale(0.8);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right .design-title {
+    font-size: 36px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-left {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-left .design-title {
+    font-size: 36px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery-right {
+    width: 100%;
+    padding-right: 0;
+    height: auto;
+    justify-content: center;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery-right .video-container,
+  .ftf-portfolio-wrapper .screens-gallery-left .video-container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .features-list {
+    gap: 20px;
+  }
+
+  .ftf-portfolio-wrapper .feature-text {
+    font-size: 18px;
+  }
+
+  .ftf-portfolio-wrapper .brand-name {
+    font-size: 42px;
+  }
+
+  .ftf-portfolio-wrapper .design-title {
+    font-size: 48px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .app::before {
+    width: 100vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.88) 50%,
+      rgba(0, 0, 0, 0.75) 65%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0.35) 85%,
+      rgba(0, 0, 0, 0.15) 92%,
+      rgba(0, 0, 0, 0.05) 96%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 1024px)  {
+
+  .ftf-portfolio-wrapper .container {
+    padding: 40px 30px;
+    height: 800px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .app-page-2 .container,
+  .ftf-portfolio-wrapper .app-page-3 .container,
+  .ftf-portfolio-wrapper .app-page-4 .container,
+  .ftf-portfolio-wrapper .app-page-5 .container,
+  .ftf-portfolio-wrapper .app-page-6 .container,
+  .ftf-portfolio-wrapper .app-page-7 .container,
+  .ftf-portfolio-wrapper .app-page-8 .container,
+  .ftf-portfolio-wrapper .app-page-9 .container,
+  .ftf-portfolio-wrapper .app-page-10 .container {
+    padding: 40px 30px;
+    height: 680px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-left {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery-right .video-container {
+    margin-right: 0;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery-left .video-container {
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .section-video {
+    max-width: 500px;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .ftf-portfolio-wrapper .next-button {
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .ftf-portfolio-wrapper .theme-toggle {
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px)  {
+
+  .ftf-portfolio-wrapper .container {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+    height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .app-page-2 .container,
+  .ftf-portfolio-wrapper .app-page-3 .container,
+  .ftf-portfolio-wrapper .app-page-4 .container,
+  .ftf-portfolio-wrapper .app-page-5 .container,
+  .ftf-portfolio-wrapper .app-page-6 .container,
+  .ftf-portfolio-wrapper .app-page-7 .container,
+  .ftf-portfolio-wrapper .app-page-8 .container,
+  .ftf-portfolio-wrapper .app-page-9 .container,
+  .ftf-portfolio-wrapper .app-page-10 .container {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+    height: 680px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .app-page-2,
+  .ftf-portfolio-wrapper .app-page-3,
+  .ftf-portfolio-wrapper .app-page-4,
+  .ftf-portfolio-wrapper .app-page-5,
+  .ftf-portfolio-wrapper .app-page-6,
+  .ftf-portfolio-wrapper .app-page-7,
+  .ftf-portfolio-wrapper .app-page-8,
+  .ftf-portfolio-wrapper .app-page-9,
+  .ftf-portfolio-wrapper .app-page-10 {
+    height: 680px;
+  }
+
+  .ftf-portfolio-wrapper .brand-name {
+    font-size: 28px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .ftf-portfolio-wrapper .design-title {
+    font-size: 28px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .screen-count {
+    font-size: 18px;
+    white-space: normal;
+    letter-spacing: 1px;
+  }
+
+  .ftf-portfolio-wrapper .branding-section {
+    width: 100%;
+    max-width: 100%;
+    gap: 15px;
+    flex-shrink: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right,
+  .ftf-portfolio-wrapper .branding-section-left {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .ftf-portfolio-wrapper .screens-gallery,
+  .ftf-portfolio-wrapper .screens-gallery-left,
+  .ftf-portfolio-wrapper .screens-gallery-right {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex: 1 1 0;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .phone-screens-stack {
+    padding-left: 10px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    min-width: unset;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ftf-portfolio-wrapper .phone-screens-stack::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .ftf-portfolio-wrapper .phone-screens-stack::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+
+  .ftf-portfolio-wrapper .phone-screens-stack::-webkit-scrollbar-thumb {
+    background: rgba(24, 188, 180, 0.5);
+    border-radius: 2px;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen {
+    width: 120px;
+    height: 240px;
+    margin-left: -40px;
+    flex-shrink: 0;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:first-child {
+    margin-left: 0;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(1),
+  .ftf-portfolio-wrapper .phone-screen:nth-child(5) {
+    display: none;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(2) {
+    transform: rotateY(-8deg) rotateZ(-2deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(3) {
+    transform: rotateY(0deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen:nth-child(4) {
+    transform: rotateY(8deg) rotateZ(2deg) scale(0.85);
+    opacity: 1;
+  }
+
+  .ftf-portfolio-wrapper .video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    min-height: 0;
+    flex-shrink: 1;
+  }
+
+  .ftf-portfolio-wrapper .section-video {
+    max-width: 450px;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .ftf-portfolio-wrapper .features-list {
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .ftf-portfolio-wrapper .feature-item {
+    gap: 12px;
+  }
+
+  .ftf-portfolio-wrapper .feature-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right .design-title,
+  .ftf-portfolio-wrapper .branding-section-left .design-title {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .info-section {
+    gap: 12px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .ftf-portfolio-wrapper .logo-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .ftf-portfolio-wrapper .app-logo {
+    height: 60px;
+  }
+
+  .ftf-portfolio-wrapper .next-button {
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .ftf-portfolio-wrapper .theme-toggle {
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .ftf-portfolio-wrapper .app::before {
+    width: 100vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.88) 50%,
+      rgba(0, 0, 0, 0.75) 65%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0.35) 85%,
+      rgba(0, 0, 0, 0.15) 92%,
+      rgba(0, 0, 0, 0.05) 96%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px)  {
+
+  .ftf-portfolio-wrapper .container {
+    padding: 20px 15px;
+    gap: 15px;
+    height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .app-page-2 .container,
+  .ftf-portfolio-wrapper .app-page-3 .container,
+  .ftf-portfolio-wrapper .app-page-4 .container,
+  .ftf-portfolio-wrapper .app-page-5 .container,
+  .ftf-portfolio-wrapper .app-page-6 .container,
+  .ftf-portfolio-wrapper .app-page-7 .container,
+  .ftf-portfolio-wrapper .app-page-8 .container,
+  .ftf-portfolio-wrapper .app-page-9 .container,
+  .ftf-portfolio-wrapper .app-page-10 .container {
+    padding: 20px 15px;
+    gap: 15px;
+    height: 680px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+  }
+
+  .ftf-portfolio-wrapper .brand-name {
+    font-size: 24px;
+  }
+
+  .ftf-portfolio-wrapper .design-title {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .screen-count {
+    font-size: 16px;
+  }
+
+  .ftf-portfolio-wrapper .branding-section-right .design-title,
+  .ftf-portfolio-wrapper .branding-section-left .design-title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .ftf-portfolio-wrapper .feature-text {
+    font-size: 13px;
+  }
+
+  .ftf-portfolio-wrapper .phone-screen {
+    width: 100px;
+    height: 200px;
+    margin-left: -30px;
+  }
+
+  .ftf-portfolio-wrapper .section-video {
+    max-width: 500px;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .ftf-portfolio-wrapper .app-logo {
+    height: 50px;
+  }
+
+  .ftf-portfolio-wrapper .next-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 10px;
+  }
+
+  .ftf-portfolio-wrapper .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}

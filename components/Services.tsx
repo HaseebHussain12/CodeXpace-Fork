@@ -155,7 +155,7 @@ export default function Services() {
             <div
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`group bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 ${
+              className={`group bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
                 visibleCards.has(index)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -164,18 +164,19 @@ export default function Services() {
                 transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                 transitionDelay: `${index * 0.1}s`,
                 boxShadow:
-                  "0 2px 8px rgba(220, 38, 38, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03)"
+                  "0 2px 8px rgba(220, 38, 38, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03)",
+                minHeight: "150px"
               }}
             >
               <h3 className="text-lg font-bold text-white mb-3 leading-tight">
                 {service.title}
               </h3>
-              <p className="text-gray-400 mb-5 leading-relaxed text-sm">
+              <p className="text-gray-400 mb-5 leading-relaxed text-sm flex-grow">
                 {service.description}
               </p>
-              {/* <Link
+              <Link
                 href={`/services/${service.slug}`}
-                className="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors duration-300 text-xs font-medium"
+                className="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors duration-300 text-xs font-medium mt-auto"
               >
                 <span>{service.cta}</span>
                 <svg
@@ -191,7 +192,7 @@ export default function Services() {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </Link> */}
+              </Link>
             </div>
           ))}
         </div>
