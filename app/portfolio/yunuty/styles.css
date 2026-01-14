@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #00031C;
+  --foreground: #ededed;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+/* Primary color for Yunuty */
+.bg-primary {
+  background-color: #00031C;
+}
+
+.text-primary {
+  color: #00031C;
+}
+
+/* Secondary color for Yunuty */
+.text-secondary {
+  color: #8C5FFF;
+}
+
+/* Custom slide up animation with light effect */
+@keyframes slide-up-light {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+}
+
+.animate-slide-up-light {
+  animation: slide-up-light 1.2s ease-out forwards;
+}

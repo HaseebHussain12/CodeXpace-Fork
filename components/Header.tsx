@@ -93,7 +93,6 @@ export default function Header() {
     }
   };
 
-
   return (
     <header className="relative z-50 backdrop-blur-2xl">
       <div
@@ -110,11 +109,10 @@ export default function Header() {
             <Image
               src={logo1}
               alt="CodeXpace Logo"
-              width={40}
-              height={20}
+              width={150}
+              height={60}
               className="object-contain"
             />
-            <span className="text-white font-semibold text-sm">CodeXpace LLC</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">

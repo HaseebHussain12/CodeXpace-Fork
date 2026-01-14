@@ -256,24 +256,22 @@ export default function LatestProjects() {
                 <p className="text-sm md:text-base font-normal text-gray-300 leading-relaxed">
                   {projects[selectedProject].description}
                 </p>
-                {(projects[selectedProject].id ===
-                  "Forward-Thinking-Fitness" && (
+                {projects[selectedProject].id === "Forward-Thinking-Fitness" && (
                   <Link
                     href="/portfolio/ftf"
                     className="inline-block w-full md:w-auto px-6 py-2.5 bg-transparent border border-red-500/60 text-red-400 rounded-lg font-medium hover:bg-red-500/10 hover:border-red-500 transition-all duration-300 text-sm text-center"
                   >
                     See Details
                   </Link>
-                )) ||
-                  (projects[selectedProject].id === "Yunuak" &&
-                    "")
-                    // <Link
-                    //   href="/portfolio/yunuak"
-                    //   className="inline-block w-full md:w-auto px-6 py-2.5 bg-transparent border border-red-500/60 text-red-400 rounded-lg font-medium hover:bg-red-500/10 hover:border-red-500 transition-all duration-300 text-sm text-center"
-                    // >
-                    //   See Details
-                    // </Link>
-                }
+                )}
+                {projects[selectedProject].id === "Yunuak" && (
+                  <Link
+                    href="/portfolio/yunuty"
+                    className="inline-block w-full md:w-auto px-6 py-2.5 bg-transparent border border-red-500/60 text-red-400 rounded-lg font-medium hover:bg-red-500/10 hover:border-red-500 transition-all duration-300 text-sm text-center"
+                  >
+                    See Details
+                  </Link>
+                )}
               </div>
 
               {/* Images horizontally aligned with text - Made smaller, aligned to top */}
