@@ -1,5 +1,6 @@
 "use client";
 
+import { Black_And_White_Picture } from "next/font/google";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -49,49 +50,65 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center" style={{ overflow: 'hidden', zIndex: 0 }}>
       {/* Premium background with visible gradient */}
       <div className="absolute inset-0 bg-black">
+        <video autoPlay loop muted playsInline 
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0, opacity: 0.9 }}
+        >
+          <source src="./video.mp4" type="video/mp4" />
+        </video>
+
+        <div className="dark"
+         style={{
+          background: "rgba(0, 0, 0, 0.42)",
+          height: "100%",
+          width: "100%",
+          position: "absolute",
+        }}      
+        ></div>
+
         {/* Base gradient - visible but subtle (around 2%) */}
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{
             background:
               "linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 0, 0, 0.98) 30%, rgba(10, 0, 0, 0.99) 60%, rgba(0, 0, 0, 1) 100%)"
           }}
-        ></div>
+        ></div> */}
 
         {/* Radial gradient for depth */}
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(20, 20, 20, 0.4) 0%, rgba(0, 0, 0, 0.98) 60%)"
           }}
-        ></div>
+        ></div> */}
 
         {/* Red gradient touch - visible (around 2%) */}
-        <div
+        {/* <div
           className="absolute bottom-0 right-0 w-1/2 h-1/2"
           style={{
             background:
               "radial-gradient(ellipse at bottom right, rgba(127, 29, 29, 0.15) 0%, transparent 50%)"
           }}
-        ></div>
+        ></div> */}
 
         {/* Subtle texture/grain overlay */}
-        <div
+        {/* <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
             backgroundSize: "200px 200px"
           }}
-        ></div>
+        ></div> */}
 
         {/* Red glow effects - visible but subtle */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <div className="absolute bottom-1/4 right-1/4 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-[150px]"></div>
-        </div>
+        </div> */}
 
         {/* Prominent dashed curved line pattern in bottom right */}
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-40">
+        {/* <div className="absolute bottom-0 right-0 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-40">
           <svg viewBox="0 0 600 600" className="w-full h-full">
             <path
               d="M 50 550 Q 300 300, 550 550"
@@ -115,7 +132,7 @@ export default function Hero() {
               strokeDasharray="12,12"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
 
       {/* Content */}
@@ -131,6 +148,16 @@ export default function Hero() {
           Fast, intelligent custom software solutions, powered by AI and
           automation, tailored to meet your unique needs.
         </p>
+        <a href="/#contact-form" 
+          className="inline-flex items-center space-x-2 
+          mr-2 max-[423px]:mb-3 
+          bg-transparent border border-white px-6 py-3 
+          text-white rounded-lg font-medium transition-all duration-300 ease-out
+          hover:bg-white hover:text-red-500 hover:border-red-500
+          hover:shadow-lg hover:shadow-red-500/20"
+        >
+          <span>Get in Touch</span>
+        </a>
         <a
           href="#latest-projects"
           onClick={(e) => {
@@ -147,7 +174,7 @@ export default function Hero() {
               });
             }
           }}
-          className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all shadow-lg shadow-red-500/20 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 transform uppercase tracking-wide font-sans"
+          className="inline-flex items-center space-x-2 bg-red-500 ml-2 hover:bg-transparent border border-white text-white  hover:border-red-500 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all transform uppercase tracking-wide font-sans"
         >
           <span>See What We've Built</span>
           <svg
@@ -164,6 +191,7 @@ export default function Hero() {
             />
           </svg>
         </a>
+        
       </div>
     </section>
   );

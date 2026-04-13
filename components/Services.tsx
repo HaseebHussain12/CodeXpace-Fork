@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import image from "next/image";
 
 const services = [
   {
     // icon: "💻",
+    image: "/4.jpg",
     title: "Web Development",
     slug: "web-development",
     description:
@@ -14,6 +16,7 @@ const services = [
   },
   {
     // icon: "📱",
+    image: "/1.jpg",
     title: "Mobile App Development",
     slug: "mobile-app-development",
     description:
@@ -22,6 +25,7 @@ const services = [
   },
   {
     // icon: "✅",
+    image: "/2.jpg",
     title: "Software Testing",
     slug: "software-testing",
     description:
@@ -30,6 +34,7 @@ const services = [
   },
   {
     // icon: "⚙️",
+    image: "/6.jpg",
     title: "Custom Software Development",
     slug: "custom-software-development",
     description:
@@ -38,6 +43,7 @@ const services = [
   },
   {
     // icon: "🧠",
+      image: "/3.jpg",
     title: "AI & Machine Learning Development",
     slug: "ai-machine-learning-development",
     description: "Your business — now intelligent.",
@@ -45,6 +51,7 @@ const services = [
   },
   {
     // icon: "✨",
+    image: "/5.jpg",
     title: "UI/UX Designing",
     slug: "ui-ux-designing",
     description: "User-centered UI/UX design services",
@@ -52,6 +59,7 @@ const services = [
   },
   {
     // icon: "☁️",
+    image: "/7.jpeg",
     title: "Devops and Cloud",
     slug: "devops-cloud-services",
     description: "Cloud that delivers. DevOps that empowers.",
@@ -59,6 +67,7 @@ const services = [
   },
   {
     // icon: "🏢",
+    image: "/8.jpeg",
     title: "SAAS Development",
     slug: "saas-development",
     description:
@@ -67,6 +76,7 @@ const services = [
   },
   {
     // icon: "🚀",
+    image: "/9.jpeg",
     title: "MVP Development",
     slug: "mvp-development",
     description: "Validate ideas and launch quicker, smarter.",
@@ -74,6 +84,7 @@ const services = [
   },
   {
     // icon: "🎨",
+    image: "/10.jpeg",
     title: "Graphic Designing",
     slug: "graphic-designing",
     description:
@@ -83,6 +94,7 @@ const services = [
 
   {
     // icon: "💼",
+      image: "/11.png",
     title: "IT Consultation",
     slug: "it-consultation",
     description: "Consulting that works — even when you’re offline.",
@@ -90,6 +102,7 @@ const services = [
   },
   {
     // icon: "📲",
+    image: "/12.png",
     title: "Enterprise Mobility Solutions",
     slug: "enterprise-mobility-solutions",
     description: "Mobility that accelerates efficiency.",
@@ -97,6 +110,7 @@ const services = [
   },
   {
     // icon: "⛓️",
+    image: "/7.jpeg",
     title: "Blockchain",
     slug: "blockchain-development",
     description: "Trust, transparency, and transactions—redefined.",
@@ -155,23 +169,30 @@ export default function Services() {
             <div
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`group bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
+              className={`group relative overflow-hidden bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
                 visibleCards.has(index)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
               style={{
+                backgroundImage: `url(${service.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                 transitionDelay: `${index * 0.1}s`,
                 boxShadow:
                   "0 2px 8px rgba(220, 38, 38, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03)",
-                minHeight: "150px"
+                minHeight: "150px",
+                height: "300px"
               }}
             >
+                <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
+
+              <div className="relative z-10">
               <h3 className="text-lg font-bold text-white mb-3 leading-tight">
                 {service.title}
               </h3>
-              <p className="text-gray-400 mb-5 leading-relaxed text-sm flex-grow">
+              <p className="text-gray-200 mb-5 leading-relaxed text-sm flex-grow">
                 {service.description}
               </p>
               <Link
@@ -193,6 +214,7 @@ export default function Services() {
                   />
                 </svg>
               </Link>
+              </div>
             </div>
           ))}
         </div>

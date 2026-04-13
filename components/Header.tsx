@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import logo1 from "../assets/logo1.png";
+import logo2 from "../assets/logo2.png";
 
 const servicesList = [
   { name: "Web Development", slug: "web-development" },
@@ -107,9 +107,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src={logo1}
+              src={logo2}
               alt="CodeXpace Logo"
-              width={150}
+              // width={85}
               height={60}
               className="object-contain"
             />

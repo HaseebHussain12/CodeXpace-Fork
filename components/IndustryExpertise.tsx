@@ -174,7 +174,11 @@ export default function IndustryExpertise() {
                     minHeight: "200px" // Prevent layout shift
                   }}
                 >
-                  <h3 className="text-3xl font-bold text-white mb-4">
+                  <h3 className="text-3xl font-bold text-white mb-5 px-4 py-2 w-fit
+                  border border-red-500/30 rounded-xl
+                  bg-black/30 backdrop-blur-md
+                  shadow-md shadow-red-500/10
+                  ">
                     {industry.title}
                   </h3>
                   <p className="text-gray-400 text-lg leading-relaxed">

@@ -9,7 +9,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "CodeXpace - Bridging.",
   description:
-    "Fast, intelligent custom software solutions, powered by AI and automation, tailored to meet your unique needs."
+    "Fast, intelligent custom software solutions, powered by AI and automation, tailored to meet your unique needs.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

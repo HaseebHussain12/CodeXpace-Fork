@@ -11,6 +11,7 @@ import IndustryExpertise from '@/components/IndustryExpertise';
 import AboutCompany from '@/components/AboutCompany';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import GlobalLeadership from '@/components/GlobalLeadership';
 
 export default function Home() {
   useEffect(() => {
@@ -53,12 +54,13 @@ export default function Home() {
       <Header />
       <Hero />
       <TechStack />
-      <Services />
       <LatestProjects />
+      <Services />
       <IndustryExpertise />
       {/* <WorkWithUs /> */}
       <AboutCompany />
       <div style={{ position: 'relative', zIndex: 100, overflow: 'visible', width: '100%' }}>
+        <GlobalLeadership />
         <ContactForm />
       </div>
       <Footer />
