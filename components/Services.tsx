@@ -155,7 +155,7 @@ export default function Services() {
   }, [showAll]);
 
   return (
-    <section id="services" className="py-20 bg-black relative">
+    <section id="services" className="py-20 pt-[90px] bg-black relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Excellence - When it{" "}

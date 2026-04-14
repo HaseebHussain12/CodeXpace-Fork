@@ -136,7 +136,7 @@ export default function LatestProjects() {
 
   return (
     <section className="pt-12 pb-0 bg-black">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Latest{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
@@ -159,11 +159,11 @@ export default function LatestProjects() {
               {visibleProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-black/40 p-4 rounded-xl border border-red-500/10 relative"
+                  className="bg-black/40 p-4 rounded-xl border-[2px] border-red-500/20 relative"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 w-fit
-                  border border-red-500/30 rounded-xl px-5 py-3
-                  bg-black/30  shadow-red-500/10">
+                   px-5 py-3
+                  ">
                     {project.name}
                   </h3>
 
@@ -183,7 +183,7 @@ export default function LatestProjects() {
 
                   <Link
                   href={`/portfolio/${project.id}`}
-                  className="absolute bottom-4 left-4 right-4 text-center px-4 py-2 border border-red-500 text-red-400 rounded-lg hover:bg-red-500/10 transition bg-black/40"
+                  className="absolute bottom-4 left-4 right-4 text-center px-4 py-2 border border-red-500/30 text-red-400/80 rounded-lg hover:bg-red-500/10 transition bg-black/40"
                   >
                     See Details
                   </Link>
@@ -193,12 +193,14 @@ export default function LatestProjects() {
             </motion.div>
           </AnimatePresence>
 
-          {/* ARROWS */}
-          <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between px-2 pointer-events-none">
+        </div>
+
+        {/* ARROWS */}
+          <div className="absolute top-1/2 left-[-50px] right-[-50px] -translate-y-1/2 flex justify-between px-2 pointer-events-none">
             <button
               onClick={() => paginate(-1)}
               disabled={page === 0}
-              className="pointer-events-auto p-3 bg-black/80 border border-red-500/40 rounded-full shadow-lg shadow-black/50 text-gray-300 hover:text-red-400 disabled:opacity-30"
+              className="pointer-events-auto p-3 bg-red-500/10 border border-red-500/40 rounded-full shadow-lg shadow-black/50 text-white hover:text-red-400 disabled:opacity-30"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -208,15 +210,13 @@ export default function LatestProjects() {
             <button
               onClick={() => paginate(1)}
               disabled={page >= totalPages - 1}
-              className="pointer-events-auto p-3 bg-black/80 border border-red-500/40 rounded-full shadow-lg shadow-black/50 text-gray-300 hover:text-red-400 disabled:opacity-30"
+              className="pointer-events-auto p-3 bg-red-500/10 border border-red-500/40 rounded-full shadow-lg shadow-black/50 text-gray-300 hover:text-red-400 disabled:opacity-30"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
-
-        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-red-500/20 py-8 relative overflow-hidden">
@@ -21,53 +22,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className='flex gap-2 items-center mb-4'>
               <h3 className="text-white font-semibold text-lg">
-                Pakistan{" "}
-                <span className="text-[12px] font-normal ">
-                  (Global Delivery Center)
-                </span>
-              </h3>
-              <img src='/flag-logo1.webp' alt='flag-logo1' className='h-[20px] w-[30px]'/>
-            </div>
-
-            <div className="space-y-3">
-
-              <div className="flex flex-col items-start ">
-                <p className="text-gray-400 text-sm mb-1">746 G4 Johar Town Lahore. Pakistan</p>
-                <p className="text-gray-400 text-sm">Contact Us:<br/> +61469021387 <br/> +923316663335 </p>
-              </div>
-
-            </div>
-          </div>
-
-
-          <div className="space-y-4">
-            <div className='flex gap-2 items-center mb-4'>
-              <h3 className="text-white font-semibold text-lg">
-                Saudi Arabia{" "}
-                <span className="text-[12px] font-normal ">
-                  (Regional Office)
-                </span>
-              </h3>
-              <img src='/flag-logo2.png' alt='flag-logo2.png' className='h-[20px] w-[30px]'/>
-            </div>
-
-            <div className="space-y-3">
-
-              <div className="flex flex-col items-start ">
-                <p className="text-gray-400 text-sm mb-1">RCTA 9059, Al Wizarat, Riyadh, Saudi Arabia</p>
-                <p className="text-gray-400 text-sm">Contact Us:<br/> +61469021387</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <div className='flex gap-2 items-center mb-4'>
-              <h3 className="text-white font-semibold text-lg">
-                US{" "}
-                <span className="text-[12px] font-normal ">
-                  (Regional Office)
-                </span>
+                US
               </h3>
               <img src='/flag-logo3.webp' alt='flag-logo3' className='h-[20px] w-[30px]'/>
             </div>
@@ -75,8 +30,17 @@ export default function Footer() {
             <div className="space-y-3">
 
               <div className="flex flex-col items-start ">
-                <p className="text-gray-400 text-sm mb-1">117 S LEXINGTON Harrisonville, MO US</p>
-                <p className="text-gray-400 text-sm">Contact Us:<br/> +61469021387</p>
+                <p className="flex gap-2 text-gray-400 text-sm mb-1"><svg className="w-4 h-4 mt-1 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg> 117 S LEXINGTON Harrisonville, MO US</p>
+                <p className="flex gap-2 text-gray-400 text-sm py-2"><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg> +61469021387</p>
+                <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg> Hr@codexpace.com
+                </p>
               </div>
 
             </div>
@@ -85,10 +49,65 @@ export default function Footer() {
           <div className="space-y-4">
             <div className='flex gap-2 items-center mb-4'>
               <h3 className="text-white font-semibold text-lg">
-                UK{" "}
-                <span className="text-[12px] font-normal ">
-                  (Regional Office)
-                </span>
+                Saudi Arabia
+              </h3>
+              <img src='/flag-logo2.png' alt='flag-logo2.png' className='h-[20px] w-[30px]'/>
+            </div>
+
+            <div className="space-y-3">
+
+              <div className="flex flex-col items-start ">
+                <p className="flex gap-2 text-gray-400 text-sm mb-1"><svg className="w-4 h-4 mt-1 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg> RCTA 9059, Al Wizarat, Riyadh, Saudi Arabia
+                </p>
+                <p className="flex gap-2 text-gray-400 text-sm py-2"><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg> +61469021387
+                </p>
+                <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg> Hr@codexpace.com
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className='flex gap-2 items-center mb-4'>
+              <h3 className="text-white font-semibold text-lg">
+                Pakistan
+              </h3>
+              <img src='/flag-logo1.webp' alt='flag-logo1' className='h-[20px] w-[30px]'/>
+            </div>
+
+            <div className="space-y-3">
+
+              <div className="flex flex-col items-start ">
+                <p className="flex gap-2 text-gray-400 text-sm mb-1"><svg className="w-4 h-4 mt-1 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg> 746 G4 Johar Town Lahore. Pakistan
+                </p>
+                <p className="flex gap-2 text-gray-400 text-sm py-2"><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg> +923316663335 
+                </p>
+                <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg> Hr@codexpace.com
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className='flex gap-2 items-center mb-4'>
+              <h3 className="text-white font-semibold text-lg">
+                UK
               </h3>
               <img src='/flag-logo4.webp' alt='flag-logo4' className='h-[20px] w-[30px]'/>
             </div>
@@ -96,8 +115,19 @@ export default function Footer() {
             <div className="space-y-3">
 
               <div className="flex flex-col items-start ">
-                <p className="text-gray-400 text-sm mb-1">Mill St E, Dewsbury, WF12 9AQ, England, GB UK</p>
-                <p className="text-gray-400 text-sm">Contact Us:<br/> +61469021387</p>
+                <p className="flex gap-2 text-gray-400 text-sm mb-1"><svg className="w-4 h-4 mt-1 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg> Mill St E, Dewsbury, WF12 9AQ, England, GB UK
+                </p>
+                <p className="flex gap-2 text-gray-400 text-sm py-2"><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg> +61469021387
+                </p>
+                <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg> Hr@codexpace.com
+                </p>
               </div>
 
             </div>
