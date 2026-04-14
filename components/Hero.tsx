@@ -59,80 +59,13 @@ export default function Hero() {
 
         <div className="dark"
          style={{
-          background: "rgba(0, 0, 0, 0.42)",
+          background: "rgba(0, 0, 0, 0.27)",
           height: "100%",
           width: "100%",
           position: "absolute",
         }}      
         ></div>
 
-        {/* Base gradient - visible but subtle (around 2%) */}
-        {/* <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 0, 0, 0.98) 30%, rgba(10, 0, 0, 0.99) 60%, rgba(0, 0, 0, 1) 100%)"
-          }}
-        ></div> */}
-
-        {/* Radial gradient for depth */}
-        {/* <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, rgba(20, 20, 20, 0.4) 0%, rgba(0, 0, 0, 0.98) 60%)"
-          }}
-        ></div> */}
-
-        {/* Red gradient touch - visible (around 2%) */}
-        {/* <div
-          className="absolute bottom-0 right-0 w-1/2 h-1/2"
-          style={{
-            background:
-              "radial-gradient(ellipse at bottom right, rgba(127, 29, 29, 0.15) 0%, transparent 50%)"
-          }}
-        ></div> */}
-
-        {/* Subtle texture/grain overlay */}
-        {/* <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            backgroundSize: "200px 200px"
-          }}
-        ></div> */}
-
-        {/* Red glow effects - visible but subtle */}
-        {/* <div className="absolute inset-0">
-          <div className="absolute bottom-1/4 right-1/4 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-[150px]"></div>
-        </div> */}
-
-        {/* Prominent dashed curved line pattern in bottom right */}
-        {/* <div className="absolute bottom-0 right-0 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-40">
-          <svg viewBox="0 0 600 600" className="w-full h-full">
-            <path
-              d="M 50 550 Q 300 300, 550 550"
-              stroke="#dc2626"
-              strokeWidth="3"
-              fill="none"
-              strokeDasharray="12,12"
-            />
-            <path
-              d="M 100 500 Q 350 200, 600 500"
-              stroke="#dc2626"
-              strokeWidth="2.5"
-              fill="none"
-              strokeDasharray="12,12"
-            />
-            <path
-              d="M 150 450 Q 400 100, 650 450"
-              stroke="#dc2626"
-              strokeWidth="2"
-              fill="none"
-              strokeDasharray="12,12"
-            />
-          </svg>
-        </div> */}
       </div>
 
       {/* Content */}
@@ -174,7 +107,7 @@ export default function Hero() {
               });
             }
           }}
-          className="inline-flex items-center space-x-2 bg-red-500 ml-2 hover:bg-transparent border border-white text-white  hover:border-red-500 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all transform uppercase tracking-wide font-sans"
+          className="inline-flex items-center space-x-2 bg-red-500 ml-2  text-white border border-red-500 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all transform uppercase tracking-wide font-sans"
         >
           <span>See What We've Built</span>
           <svg

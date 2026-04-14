@@ -12,11 +12,15 @@ const slides = [
     text: "CTO",
     image: "Asad-ali.jpeg"
   },
-  
+  {
+    title: "Talha Zahid",
+    text: "COO",
+    image: "Talha-Zahid.jpeg"
+  },
   {
     title: "Ali Reyan",
     text: "Senior Software Architect",
-    image: "ali-rehan.png"
+    image: "ali-rehan.jpeg"
   },
   {
     title: "Abdullah",
@@ -27,11 +31,6 @@ const slides = [
     title: "Ans",
     text: "Lead Python Developer",
     image: "ans.png"
-  },
-  {
-    title: "Talha Zahid",
-    text: "COO",
-    image: "Talha-Zahid.jpeg"
   }
 ];
 
@@ -114,7 +113,7 @@ function GlobalLeadership() {
         {/* arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/80 border border-red-500/40 text-white p-2 md:p-3 rounded-full"
+          className="absolute left-[-10px] md:left-[-50px] top-1/2 -translate-y-1/2 bg-red-500/10 border border-red-500/40 text-white hover:text-red-400 disabled:opacity-30 p-2 md:p-3 rounded-full"
         >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -123,7 +122,7 @@ function GlobalLeadership() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/80 border border-red-500/40 text-white p-2 md:p-3 rounded-full"
+          className="absolute right-2 md:right-[-50px] top-1/2 -translate-y-1/2 bg-red-500/10 border border-red-500/40 text-white hover:text-red-400 disabled:opacity-30 p-2 md:p-3 rounded-full"
         >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
