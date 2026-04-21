@@ -8,29 +8,29 @@ const slides = [
     image: "Meenam-afzal.jpeg"
   },
   {
+    title: "Abdullah",
+    text: "Chief Systems Architect",
+    image: "Abdulllah.jpeg"
+  },
+  {
+    title: "Ali Reyan",
+    text: "Cheif Technology officer",
+    image: "ali-rehan.jpeg"
+  },
+  {
+    title: "Ans",
+    text: "Senior Backend developer",
+    image: "ans.png"
+  },
+  {
     title: "Asad Ali",
-    text: "CTO",
+    text: "Chief Sales Officer",
     image: "Asad-ali.jpeg"
   },
   {
     title: "Talha Zahid",
-    text: "COO",
+    text: "Chief Operational Officer",
     image: "Talha-Zahid.jpeg"
-  },
-  {
-    title: "Ali Reyan",
-    text: "Senior Software Architect",
-    image: "ali-rehan.jpeg"
-  },
-  {
-    title: "Abdullah",
-    text: "Co-Founder and Senior Developer",
-    image: "Abdulllah.jpeg"
-  },
-  {
-    title: "Ans",
-    text: "Lead Python Developer",
-    image: "ans.png"
   }
 ];
 

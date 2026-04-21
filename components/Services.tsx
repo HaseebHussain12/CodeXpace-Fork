@@ -7,7 +7,7 @@ import image from "next/image";
 const services = [
   {
     // icon: "💻",
-    image: "/4.jpg",
+    image: "/web.jpeg",
     title: "Web Development",
     slug: "web-development",
     description:
@@ -16,7 +16,7 @@ const services = [
   },
   {
     // icon: "📱",
-    image: "/1.jpg",
+    image: "/mobile.jpeg",
     title: "Mobile App Development",
     slug: "mobile-app-development",
     description:
@@ -25,7 +25,7 @@ const services = [
   },
   {
     // icon: "✅",
-    image: "/2.jpg",
+    image: "/testing.jpeg",
     title: "Software Testing",
     slug: "software-testing",
     description:
@@ -34,7 +34,7 @@ const services = [
   },
   {
     // icon: "⚙️",
-    image: "/6.jpg",
+    image: "/custum.jpeg",
     title: "Custom Software Development",
     slug: "custom-software-development",
     description:
@@ -43,7 +43,7 @@ const services = [
   },
   {
     // icon: "🧠",
-      image: "/3.jpg",
+      image: "/AI-Machine.jpeg",
     title: "AI & Machine Learning Development",
     slug: "ai-machine-learning-development",
     description: "Your business — now intelligent.",
@@ -51,7 +51,7 @@ const services = [
   },
   {
     // icon: "✨",
-    image: "/5.jpg",
+    image: "/UIUX-Designing.jpeg",
     title: "UI/UX Designing",
     slug: "ui-ux-designing",
     description: "User-centered UI/UX design services",
@@ -59,7 +59,7 @@ const services = [
   },
   {
     // icon: "☁️",
-    image: "/7.jpeg",
+    image: "/devops.jpeg",
     title: "Devops and Cloud",
     slug: "devops-cloud-services",
     description: "Cloud that delivers. DevOps that empowers.",
@@ -67,7 +67,7 @@ const services = [
   },
   {
     // icon: "🏢",
-    image: "/8.jpeg",
+    image: "/saas.jpeg",
     title: "SAAS Development",
     slug: "saas-development",
     description:
@@ -76,7 +76,7 @@ const services = [
   },
   {
     // icon: "🚀",
-    image: "/9.jpeg",
+    image: "/MVP.jpeg",
     title: "MVP Development",
     slug: "mvp-development",
     description: "Validate ideas and launch quicker, smarter.",
@@ -84,7 +84,7 @@ const services = [
   },
   {
     // icon: "🎨",
-    image: "/10.jpeg",
+    image: "/graphic.jpeg",
     title: "Graphic Designing",
     slug: "graphic-designing",
     description:
@@ -94,7 +94,7 @@ const services = [
 
   {
     // icon: "💼",
-      image: "/11.png",
+      image: "/IT.jpeg",
     title: "IT Consultation",
     slug: "it-consultation",
     description: "Consulting that works — even when you’re offline.",
@@ -102,7 +102,7 @@ const services = [
   },
   {
     // icon: "📲",
-    image: "/12.png",
+    image: "/enter.jpeg",
     title: "Enterprise Mobility Solutions",
     slug: "enterprise-mobility-solutions",
     description: "Mobility that accelerates efficiency.",
@@ -110,7 +110,7 @@ const services = [
   },
   {
     // icon: "⛓️",
-    image: "/7.jpeg",
+    image: "block-chain.jpeg",
     title: "Blockchain",
     slug: "blockchain-development",
     description: "Trust, transparency, and transactions—redefined.",

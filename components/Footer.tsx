@@ -39,7 +39,7 @@ export default function Footer() {
                   </svg> +61469021387</p>
                 <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg> Hr@codexpace.com
+                  </svg> hr@codexpace.com
                 </p>
               </div>
 
@@ -68,7 +68,7 @@ export default function Footer() {
                 </p>
                 <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg> Hr@codexpace.com
+                  </svg> hr@codexpace.com
                 </p>
               </div>
 
@@ -97,7 +97,7 @@ export default function Footer() {
                 </p>
                 <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg> Hr@codexpace.com
+                  </svg> hr@codexpace.com
                 </p>
               </div>
 
@@ -126,7 +126,7 @@ export default function Footer() {
                 </p>
                 <p className='flex gap-2 text-gray-400 text-sm'><svg className="w-4 h-4 flex-shrink-0" fill="none" color='rgb(239 68 68)' stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg> Hr@codexpace.com
+                  </svg> hr@codexpace.com
                 </p>
               </div>
 

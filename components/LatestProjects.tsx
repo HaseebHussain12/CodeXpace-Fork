@@ -161,9 +161,7 @@ export default function LatestProjects() {
                   key={project.id}
                   className="bg-black/40 p-4 rounded-xl border-[2px] border-red-500/20 relative"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2 w-fit
-                   px-5 py-3
-                  ">
+                  <h3 className="text-lg font-semibold text-white mb-2 w-fit py-3 ">
                     {project.name}
                   </h3>
 
@@ -171,7 +169,7 @@ export default function LatestProjects() {
                     {project.description}
                   </p>
 
-                  <div className="relative w-full aspect-[3/4]">
+                  <div className="relative w-full aspect-[2/1] mb-[55px]">
                     <Image
                       src={project.image}
                       alt={project.name}
