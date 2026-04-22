@@ -18,7 +18,7 @@ const slides = [
     image: "ali-rehan.jpeg"
   },
   {
-    title: "Ans",
+    title: "Ans Mustafa",
     text: "Senior Backend developer",
     image: "ans.png"
   },
@@ -30,7 +30,7 @@ const slides = [
   {
     title: "Talha Zahid",
     text: "Chief Operational Officer",
-    image: "Talha-Zahid.jpeg"
+    image: "Talha-Zahid (2).jpeg"
   }
 ];
 
