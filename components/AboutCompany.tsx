@@ -2,15 +2,14 @@
 import { useEffect, useRef, useState } from "react";
 
 const benefits = [
-  'Proven Track Record of Delivering Results',
-  'Flexible Engagement Models & Rapid Onboarding',
-  'Expertise in AI, Blockchain, Cloud, and Quality Assurance',
-  'Clear, Transparent Pricing with No Hidden Costs',
-  'Full-End Ownership of Projects from Start to Finish',
+  "Proven Track Record of Delivering Results",
+  "Flexible Engagement Models & Rapid Onboarding",
+  "Expertise in AI, Blockchain, Cloud, and Quality Assurance",
+  "Clear, Transparent Pricing with No Hidden Costs",
+  "Full-End Ownership of Projects from Start to Finish",
 ];
 
 export default function AboutCompany() {
-
   const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef(null);
 
@@ -18,7 +17,6 @@ export default function AboutCompany() {
   const [countries, setCountries] = useState(0);
   const [years, setYears] = useState(0);
 
-  // detect when section visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -34,11 +32,12 @@ export default function AboutCompany() {
     return () => observer.disconnect();
   }, []);
 
-  // counting animation
   useEffect(() => {
     if (!startCount) return;
 
-    let p = 0, c = 0, y = 0;
+    let p = 0,
+      c = 0,
+      y = 0;
 
     const interval = setInterval(() => {
       if (p < 300) {
@@ -63,13 +62,11 @@ export default function AboutCompany() {
   }, [startCount]);
 
   return (
-    <section 
-      ref={sectionRef}
-      className="pt-12 pb-24 bg-black relative"
-    >
+    <section ref={sectionRef} className="py-14 md:py-20 lg:py-24 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        {/* Title */}
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-14 lg:mb-16">
           Why Partner with{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             CodeXpace
@@ -77,49 +74,53 @@ export default function AboutCompany() {
           ?
         </h2>
 
-        <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-14">
+        {/* Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-center">
 
-          <div className="flex justify-start">
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full flex-shrink-0 mt-2.5"></div>
-                  <p className="text-white text-base leading-relaxed">
-                    {benefit}
-                  </p>
-                </div>
-              ))}
-            </div>
+          {/* Benefits */}
+          <div className="space-y-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 shrink-0"></div>
+                <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+                  {benefit}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <div className="flex justify-evenly gap-10">
+          {/* Counters */}
+          <div className="flex flex-wrap justify-center lg:justify-evenly gap-8 sm:gap-10">
 
             <div className="flex flex-col items-center">
-              <h3 className="text-[50px] font-bold text-red-500 mb-4">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-2">
                 {projects}+
               </h3>
-              <p className="text-gray-300">Successful Projects</p>
+              <p className="text-gray-300 text-sm sm:text-base text-center">
+                Successful Projects
+              </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <h3 className="text-[50px] font-bold text-red-500 mb-4">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-2">
                 {countries}+
               </h3>
-              <p className="text-gray-300">Countries Supported</p>
+              <p className="text-gray-300 text-sm sm:text-base text-center">
+                Countries Supported
+              </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <h3 className="text-[50px] font-bold text-red-500 mb-4">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-2">
                 {years}+
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-sm sm:text-base text-center">
                 Years of Enablement Experience
               </p>
             </div>
 
           </div>
         </div>
-
       </div>
     </section>
   );

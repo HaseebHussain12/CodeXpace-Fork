@@ -11,25 +11,22 @@ const servicesList = [
   { name: "Mobile App Development", slug: "mobile-app-development" },
   { name: "Software Testing", slug: "software-testing" },
   { name: "Custom Software Development", slug: "custom-software-development" },
-  {
-    name: "AI & Machine Learning Development",
-    slug: "ai-machine-learning-development"
-  },
+  { name: "AI & Machine Learning Development", slug: "ai-machine-learning-development" },
   { name: "Devops and Cloud", slug: "devops-cloud-services" },
   { name: "SAAS Development", slug: "saas-development" },
   { name: "MVP Development", slug: "mvp-development" },
   { name: "Graphic Designing", slug: "graphic-designing" },
   { name: "UI/UX Designing", slug: "ui-ux-designing" },
   { name: "IT Consultation", slug: "it-consultation" },
-  {
-    name: "Enterprise Mobility Solutions",
-    slug: "enterprise-mobility-solutions"
-  },
+  { name: "Enterprise Mobility Solutions", slug: "enterprise-mobility-solutions" },
   { name: "Blockchain", slug: "blockchain-development" }
 ];
 
 export default function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+
   const pathname = usePathname();
   const router = useRouter();
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -52,7 +49,7 @@ export default function Header() {
   const handleMouseLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setIsServicesOpen(false);
-    }, 300); // 300ms delay before closing
+    }, 300);
   };
 
   useEffect(() => {
@@ -65,30 +62,20 @@ export default function Header() {
 
   const handleBookMeetingClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
     if (pathname === "/") {
-      // If already on home page, scroll to contact form
       const contactForm = document.getElementById("contact-form");
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: "smooth", block: "end" });
-      }
+      contactForm?.scrollIntoView({ behavior: "smooth", block: "end" });
     } else {
-      // If on another page, navigate to home with hash
       router.push("/#contact-form");
     }
   };
 
   const handleContactUsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-
     if (pathname === "/") {
-      // If already on home page, scroll to contact form
       const contactForm = document.getElementById("contact-form");
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: "smooth", block: "end" });
-      }
+      contactForm?.scrollIntoView({ behavior: "smooth", block: "end" });
     } else {
-      // If on another page, navigate to home with hash
       router.push("/#contact-form");
     }
   };
@@ -102,80 +89,60 @@ export default function Header() {
             "linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(20, 0, 0, 0.82) 50%, rgba(0, 0, 0, 0.85) 100%)"
         }}
       ></div>
+
       <nav className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src={new1}
-              alt="CodeXpace Logo"
-              // width={85}
-              height={60}
-              className="object-contain"
-            />
+            <Image src={new1} alt="CodeXpace Logo" height={60} className="object-contain" />
           </Link>
 
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
-              className={`font-semibold text-sm transition-colors ${
-                isActive("/") ? "text-red-400" : "text-white hover:text-red-400"
-              }`}
+              className={`font-semibold text-sm transition-colors ${isActive("/") ? "text-red-400" : "text-white hover:text-red-400"
+                }`}
             >
               Home
             </Link>
+
             <Link
               href="/about"
-              className={`font-semibold text-sm transition-colors ${
-                isActive("/about")
+              className={`font-semibold text-sm transition-colors ${isActive("/about")
                   ? "text-red-400"
                   : "text-white hover:text-red-400"
-              }`}
+                }`}
             >
               About Us
             </Link>
+
+            {/* Services */}
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`font-semibold text-sm transition-colors flex items-center space-x-1 ${
-                  isServicesOpen || isActive("/services")
+                className={`font-semibold text-sm transition-colors flex items-center space-x-1 ${isServicesOpen || isActive("/services")
                     ? "text-red-400"
                     : "text-white hover:text-red-400"
-                }`}
+                  }`}
               >
                 <span>Services</span>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+
               {isServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-72 bg-black/95 backdrop-blur-xl border border-red-500/30 rounded-lg shadow-2xl py-3"
-                  style={{
-                    boxShadow:
-                      "0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(220, 38, 38, 0.2)"
-                  }}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
+                <div className="absolute top-full left-0 mt-2 w-72 bg-black/95 backdrop-blur-xl border border-red-500/30 rounded-lg shadow-2xl py-3">
                   {servicesList.map((service, index) => (
                     <Link
                       key={index}
                       href={`/services/${service.slug}`}
-                      className="block px-4 py-2.5 text-white text-sm hover:bg-red-500/10 hover:text-red-400 transition-colors"
+                      className="block px-4 py-2.5 text-white text-sm hover:bg-red-500/10 hover:text-red-400"
                     >
                       {service.name}
                     </Link>
@@ -183,26 +150,17 @@ export default function Header() {
                 </div>
               )}
             </div>
-            {/* <Link
-              href="/success-stories"
-              className={`font-semibold text-sm transition-colors ${
-                isActive("/success-stories")
-                  ? "text-red-400"
-                  : "text-white hover:text-red-400"
-              }`}
-            >
-              Case Studies
-            </Link> */}
+
             <Link
               href="/careers"
-              className={`font-semibold text-sm transition-colors ${
-                isActive("/careers")
+              className={`font-semibold text-sm transition-colors ${isActive("/careers")
                   ? "text-red-400"
                   : "text-white hover:text-red-400"
-              }`}
+                }`}
             >
               Careers
             </Link>
+
             <Link
               href="/#contact-form"
               onClick={handleContactUsClick}
@@ -212,28 +170,79 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <Link
             href="/#contact-form"
             onClick={handleBookMeetingClick}
-            className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-5 py-2 rounded-lg font-medium text-sm transition-all flex items-center space-x-1.5 shadow-lg shadow-red-500/20 hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 transform"
+            className="hidden md:flex bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-2 rounded-lg font-medium text-sm"
           >
-            <span>BOOK A MEETING</span>
-            <svg
-              className="w-3.5 h-3.5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            BOOK A MEETING
           </Link>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-red-500/20 py-4 space-y-3">
+
+            <Link href="/" className="block text-white px-4">Home</Link>
+            <Link href="/about" className="block text-white px-4">About Us</Link>
+
+            {/* Mobile Services */}
+            <div>
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className="w-full text-left text-white px-4 flex items-center justify-between"
+              >
+                <span>Services</span>
+                <svg className={`w-4 h-4 transition ${isMobileServicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isMobileServicesOpen && (
+                <div className="mt-2 space-y-1">
+                  {servicesList.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={`/services/${service.slug}`}
+                      className="block text-gray-300 text-sm px-6 py-1.5 hover:text-red-400"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link href="/careers" className="block text-white px-4">Careers</Link>
+
+            <Link href="/#contact-form" className="block text-white px-4">
+              Contact Us
+            </Link>
+
+            <Link
+              href="/#contact-form"
+              className="block mx-4 mt-3 bg-red-600 text-white text-center py-2 rounded-lg"
+            >
+              BOOK A MEETING
+            </Link>
+
+          </div>
+        )}
       </nav>
     </header>
   );
