@@ -6,13 +6,12 @@ import image from "next/image";
 
 const services = [
   {
-    // icon: "💻",
-    image: "/web.jpeg",
-    title: "Web Development",
-    slug: "web-development",
-    description:
-      "Your one-stop shop for stellar web applications, built with the latest technologies.",
-    cta: "Discover Our Development Approach"
+    // icon: "🧠",
+    image: "/AI-Machine.jpeg",
+    title: "AI & Machine Learning Development",
+    slug: "ai-machine-learning-development",
+    description: "Your business — now intelligent.",
+    cta: "See AI in Action"
   },
   {
     // icon: "📱",
@@ -22,6 +21,40 @@ const services = [
     description:
       "Secure, scalable, and innovative mobile apps that deliver results.",
     cta: "Start Your Mobile App Journey"
+  },
+  {
+    // icon: "💻",
+    image: "/web.jpeg",
+    title: "Web Development",
+    slug: "web-development",
+    description:
+      "Your one-stop shop for stellar web applications, built with the latest technologies.",
+    cta: "Discover Our Development Approach"
+  },
+  {
+    // icon: "📲",
+    image: "/enter.jpeg",
+    title: "Enterprise Mobility Solutions",
+    slug: "enterprise-mobility-solutions",
+    description: "Mobility that accelerates efficiency.",
+    cta: "Discover Mobility Solutions"
+  },
+  {
+    // icon: "🚀",
+    image: "/MVP.jpeg",
+    title: "MVP Development",
+    slug: "mvp-development",
+    description: "Validate ideas and launch quicker, smarter.",
+    cta: "Start Your MVP"
+  },
+  {
+    // icon: "🏢",
+    image: "/saas.jpeg",
+    title: "SAAS Development",
+    slug: "saas-development",
+    description:
+      "End-to-end innovative SaaS software development services that are scalable, secure, and user-centric.",
+    cta: "Explore SAAS Solutions"
   },
   {
     // icon: "✅",
@@ -42,14 +75,6 @@ const services = [
     cta: "Explore Custom Solutions"
   },
   {
-    // icon: "🧠",
-    image: "/AI-Machine.jpeg",
-    title: "AI & Machine Learning Development",
-    slug: "ai-machine-learning-development",
-    description: "Your business — now intelligent.",
-    cta: "See AI in Action"
-  },
-  {
     // icon: "✨",
     image: "/UIUX-Designing.jpeg",
     title: "UI/UX Designing",
@@ -64,23 +89,6 @@ const services = [
     slug: "devops-cloud-services",
     description: "Cloud that delivers. DevOps that empowers.",
     cta: "Optimize with DevOps"
-  },
-  {
-    // icon: "🏢",
-    image: "/saas.jpeg",
-    title: "SAAS Development",
-    slug: "saas-development",
-    description:
-      "End-to-end innovative SaaS software development services that are scalable, secure, and user-centric.",
-    cta: "Explore SAAS Solutions"
-  },
-  {
-    // icon: "🚀",
-    image: "/MVP.jpeg",
-    title: "MVP Development",
-    slug: "mvp-development",
-    description: "Validate ideas and launch quicker, smarter.",
-    cta: "Start Your MVP"
   },
   {
     // icon: "🎨",
@@ -99,14 +107,6 @@ const services = [
     slug: "it-consultation",
     description: "Consulting that works — even when you’re offline.",
     cta: "Get Consultation"
-  },
-  {
-    // icon: "📲",
-    image: "/enter.jpeg",
-    title: "Enterprise Mobility Solutions",
-    slug: "enterprise-mobility-solutions",
-    description: "Mobility that accelerates efficiency.",
-    cta: "Discover Mobility Solutions"
   },
   {
     // icon: "⛓️",
@@ -158,10 +158,11 @@ export default function Services() {
     <section id="services" className="py-20 pt-[90px] bg-black relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
-          What We{" "}
+          Excellence - When it{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
-            Do
+            Comes
           </span>{" "}
+          to
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedServices.map((service, index) => (

@@ -6,13 +6,12 @@ import image from "next/image";
 
 const services = [
   {
-    // icon: "💻",
-    image: "/web.jpeg",
-    title: "Web Development",
-    slug: "web-development",
-    description:
-      "Your one-stop shop for stellar web applications, built with the latest technologies.",
-    cta: "Discover Our Development Approach"
+    // icon: "🧠",
+    image: "/AI-Machine.jpeg",
+    title: "AI & Machine Learning Development",
+    slug: "ai-machine-learning-development",
+    description: "Your business — now intelligent.",
+    cta: "See AI in Action"
   },
   {
     // icon: "📱",
@@ -22,6 +21,40 @@ const services = [
     description:
       "Secure, scalable, and innovative mobile apps that deliver results.",
     cta: "Start Your Mobile App Journey"
+  },
+  {
+    // icon: "💻",
+    image: "/web.jpeg",
+    title: "Web Development",
+    slug: "web-development",
+    description:
+      "Your one-stop shop for stellar web applications, built with the latest technologies.",
+    cta: "Discover Our Development Approach"
+  },
+  {
+    // icon: "📲",
+    image: "/enter.jpeg",
+    title: "Enterprise Mobility Solutions",
+    slug: "enterprise-mobility-solutions",
+    description: "Mobility that accelerates efficiency.",
+    cta: "Discover Mobility Solutions"
+  },
+  {
+    // icon: "🚀",
+    image: "/MVP.jpeg",
+    title: "MVP Development",
+    slug: "mvp-development",
+    description: "Validate ideas and launch quicker, smarter.",
+    cta: "Start Your MVP"
+  },
+  {
+    // icon: "🏢",
+    image: "/saas.jpeg",
+    title: "SAAS Development",
+    slug: "saas-development",
+    description:
+      "End-to-end innovative SaaS software development services that are scalable, secure, and user-centric.",
+    cta: "Explore SAAS Solutions"
   },
   {
     // icon: "✅",
@@ -42,14 +75,6 @@ const services = [
     cta: "Explore Custom Solutions"
   },
   {
-    // icon: "🧠",
-    image: "/AI-Machine.jpeg",
-    title: "AI & Machine Learning Development",
-    slug: "ai-machine-learning-development",
-    description: "Your business — now intelligent.",
-    cta: "See AI in Action"
-  },
-  {
     // icon: "✨",
     image: "/UIUX-Designing.jpeg",
     title: "UI/UX Designing",
@@ -64,23 +89,6 @@ const services = [
     slug: "devops-cloud-services",
     description: "Cloud that delivers. DevOps that empowers.",
     cta: "Optimize with DevOps"
-  },
-  {
-    // icon: "🏢",
-    image: "/saas.jpeg",
-    title: "SAAS Development",
-    slug: "saas-development",
-    description:
-      "End-to-end innovative SaaS software development services that are scalable, secure, and user-centric.",
-    cta: "Explore SAAS Solutions"
-  },
-  {
-    // icon: "🚀",
-    image: "/MVP.jpeg",
-    title: "MVP Development",
-    slug: "mvp-development",
-    description: "Validate ideas and launch quicker, smarter.",
-    cta: "Start Your MVP"
   },
   {
     // icon: "🎨",
@@ -99,14 +107,6 @@ const services = [
     slug: "it-consultation",
     description: "Consulting that works — even when you’re offline.",
     cta: "Get Consultation"
-  },
-  {
-    // icon: "📲",
-    image: "/enter.jpeg",
-    title: "Enterprise Mobility Solutions",
-    slug: "enterprise-mobility-solutions",
-    description: "Mobility that accelerates efficiency.",
-    cta: "Discover Mobility Solutions"
   },
   {
     // icon: "⛓️",
