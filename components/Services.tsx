@@ -7,7 +7,7 @@ import image from "next/image";
 const services = [
   {
     // icon: "💻",
-    image: "/4.jpg",
+    image: "/web.jpeg",
     title: "Web Development",
     slug: "web-development",
     description:
@@ -16,7 +16,7 @@ const services = [
   },
   {
     // icon: "📱",
-    image: "/1.jpg",
+    image: "/mobile.jpeg",
     title: "Mobile App Development",
     slug: "mobile-app-development",
     description:
@@ -25,7 +25,7 @@ const services = [
   },
   {
     // icon: "✅",
-    image: "/2.jpg",
+    image: "/testing.jpeg",
     title: "Software Testing",
     slug: "software-testing",
     description:
@@ -34,7 +34,7 @@ const services = [
   },
   {
     // icon: "⚙️",
-    image: "/6.jpg",
+    image: "/custum.jpeg",
     title: "Custom Software Development",
     slug: "custom-software-development",
     description:
@@ -43,7 +43,7 @@ const services = [
   },
   {
     // icon: "🧠",
-      image: "/3.jpg",
+    image: "/AI-Machine.jpeg",
     title: "AI & Machine Learning Development",
     slug: "ai-machine-learning-development",
     description: "Your business — now intelligent.",
@@ -51,7 +51,7 @@ const services = [
   },
   {
     // icon: "✨",
-    image: "/5.jpg",
+    image: "/UIUX-Designing.jpeg",
     title: "UI/UX Designing",
     slug: "ui-ux-designing",
     description: "User-centered UI/UX design services",
@@ -59,7 +59,7 @@ const services = [
   },
   {
     // icon: "☁️",
-    image: "/7.jpeg",
+    image: "/devops.jpeg",
     title: "Devops and Cloud",
     slug: "devops-cloud-services",
     description: "Cloud that delivers. DevOps that empowers.",
@@ -67,7 +67,7 @@ const services = [
   },
   {
     // icon: "🏢",
-    image: "/8.jpeg",
+    image: "/saas.jpeg",
     title: "SAAS Development",
     slug: "saas-development",
     description:
@@ -76,7 +76,7 @@ const services = [
   },
   {
     // icon: "🚀",
-    image: "/9.jpeg",
+    image: "/MVP.jpeg",
     title: "MVP Development",
     slug: "mvp-development",
     description: "Validate ideas and launch quicker, smarter.",
@@ -84,7 +84,7 @@ const services = [
   },
   {
     // icon: "🎨",
-    image: "/10.jpeg",
+    image: "/graphic.jpeg",
     title: "Graphic Designing",
     slug: "graphic-designing",
     description:
@@ -94,7 +94,7 @@ const services = [
 
   {
     // icon: "💼",
-      image: "/11.png",
+    image: "/IT.jpeg",
     title: "IT Consultation",
     slug: "it-consultation",
     description: "Consulting that works — even when you’re offline.",
@@ -102,7 +102,7 @@ const services = [
   },
   {
     // icon: "📲",
-    image: "/12.png",
+    image: "/enter.jpeg",
     title: "Enterprise Mobility Solutions",
     slug: "enterprise-mobility-solutions",
     description: "Mobility that accelerates efficiency.",
@@ -110,7 +110,7 @@ const services = [
   },
   {
     // icon: "⛓️",
-    image: "/7.jpeg",
+    image: "block-chain.jpeg",
     title: "Blockchain",
     slug: "blockchain-development",
     description: "Trust, transparency, and transactions—redefined.",
@@ -157,7 +157,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 pt-[90px] bg-black relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
           Excellence - When it{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Comes
@@ -169,11 +169,10 @@ export default function Services() {
             <div
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`group relative overflow-hidden bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
-                visibleCards.has(index)
+              className={`group relative overflow-hidden bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${visibleCards.has(index)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
-              }`}
+                }`}
               style={{
                 backgroundImage: `url(${service.image})`,
                 backgroundSize: "cover",
@@ -186,34 +185,34 @@ export default function Services() {
                 height: "300px"
               }}
             >
-                <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
+              <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
 
               <div className="relative z-10">
-              <h3 className="text-lg font-bold text-white mb-3 leading-tight">
-                {service.title}
-              </h3>
-              <p className="text-gray-200 mb-5 leading-relaxed text-sm flex-grow">
-                {service.description}
-              </p>
-              <Link
-                href={`/services/${service.slug}`}
-                className="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors duration-300 text-xs font-medium mt-auto"
-              >
-                <span>{service.cta}</span>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+                  {service.title}
+                </h3>
+                <p className="text-gray-200 mb-5 leading-relaxed text-sm flex-grow">
+                  {service.description}
+                </p>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors duration-300 text-xs font-medium mt-auto"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+                  <span>{service.cta}</span>
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
               </div>
             </div>
           ))}

@@ -48,7 +48,7 @@ const defaultProcessSteps: ProcessStep[] = [
   },
   {
     number: 7,
-    title: "Maintenance/Enhancement",
+    title: "Maintenance / Enhancement",
     description:
       "Providing on-demand complete software maintenance, feedback monitoring, and functionality enhancement services."
   }
@@ -127,9 +127,8 @@ export default function OurProcess(props: OurProcessProps = {}) {
     <section ref={sectionRef} className="py-20 bg-black relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <h2
-          className={`text-3xl md:text-4xl font-bold text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-3xl md:text-4xl font-bold text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           Our{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
@@ -139,9 +138,8 @@ export default function OurProcess(props: OurProcessProps = {}) {
 
         {/* Process Flow Timeline */}
         <div
-          className={`relative mb-12 transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`relative mb-12 transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           {/* Connecting Line */}
           <div className="absolute top-10 left-0 right-0 h-0.5 bg-gray-800 hidden md:block"></div>
@@ -160,11 +158,10 @@ export default function OurProcess(props: OurProcessProps = {}) {
                   {/* Step Circle */}
                   <button
                     onClick={() => handleStepClick(step.number)}
-                    className={`relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-bold text-lg md:text-xl transition-all duration-300 border-2 ${
-                      isSelected
-                        ? "bg-gradient-to-br from-red-600 to-red-500 scale-110 shadow-lg shadow-red-500/50 border-red-500"
-                        : "bg-gray-800 hover:bg-gray-700 border-gray-700"
-                    }`}
+                    className={`relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center font-bold text-lg md:text-xl transition-all duration-300 border-2 ${isSelected
+                      ? "bg-gradient-to-br from-red-600 to-red-500 scale-110 shadow-lg shadow-red-500/50 border-red-500"
+                      : "bg-gray-800 hover:bg-gray-700 border-gray-700"
+                      }`}
                     style={{
                       boxShadow: isSelected
                         ? "0 0 0 4px rgba(220, 38, 38, 0.2), 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(220, 38, 38, 0.2)"
@@ -183,9 +180,8 @@ export default function OurProcess(props: OurProcessProps = {}) {
 
                   {/* Step Title */}
                   <p
-                    className={`mt-3 text-xs md:text-sm text-center font-medium transition-colors duration-300 ${
-                      isSelected ? "text-white" : "text-gray-400"
-                    }`}
+                    className={`mt-3 text-xs md:text-sm text-center font-medium transition-colors duration-300 ${isSelected ? "text-white" : "text-gray-400"
+                      }`}
                   >
                     {step.title}
                   </p>
@@ -197,9 +193,8 @@ export default function OurProcess(props: OurProcessProps = {}) {
 
         {/* Description Card */}
         <div
-          className={`mb-8 transition-all duration-1000 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`mb-8 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div
             className="bg-black/60 backdrop-blur-xl border border-red-500/30 rounded-2xl p-8 md:p-12 relative overflow-hidden"
@@ -234,9 +229,8 @@ export default function OurProcess(props: OurProcessProps = {}) {
 
         {/* CTA Button */}
         <div
-          className={`text-center transition-all duration-1000 delay-400 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center transition-all duration-1000 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <Link
             href="/contact"

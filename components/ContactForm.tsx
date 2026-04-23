@@ -66,10 +66,11 @@ export default function ContactForm() {
           </span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Side - Contact Info */}
           <div className=" flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">
               Ready to Get{" "}
               <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
                 Started?
@@ -78,6 +79,7 @@ export default function ContactForm() {
             <p className="text-start text-gray-400 text-sm mb-12 max-w-[400px]">
               Turn your ideas into impactful digital products. Connect with our team for a free consultation and discover how we can help you achieve your business goals.
             </p>
+            </div>
           </div>
 
           {/* Right Side - Contact Form */}
@@ -108,7 +110,7 @@ export default function ContactForm() {
                   className="w-full bg-black/40 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-red-500"
                 />
               </div>
-              <div>
+              {/* <div>
                 <input
                   type="email"
                   name="email"
@@ -118,7 +120,7 @@ export default function ContactForm() {
                   required
                   className="w-full bg-black/40 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-red-500"
                 />
-              </div>
+              </div> */}
               <div>
                 <input
                   type="tel"

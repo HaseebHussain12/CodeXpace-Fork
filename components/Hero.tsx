@@ -50,20 +50,20 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center" style={{ overflow: 'hidden', zIndex: 0 }}>
       {/* Premium background with visible gradient */}
       <div className="absolute inset-0 bg-black">
-        <video autoPlay loop muted playsInline 
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0, opacity: 0.9 }}
+        <video autoPlay loop muted playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0, opacity: 0.9 }}
         >
           <source src="./video.mp4" type="video/mp4" />
         </video>
 
         <div className="dark"
-         style={{
-          background: "rgba(0, 0, 0, 0.27)",
-          height: "100%",
-          width: "100%",
-          position: "absolute",
-        }}      
+          style={{
+            background: "rgba(0, 0, 0, 0.27)",
+            height: "100%",
+            width: "100%",
+            position: "absolute",
+          }}
         ></div>
 
       </div>
@@ -81,9 +81,9 @@ export default function Hero() {
           Fast, intelligent custom software solutions, powered by AI and
           automation, tailored to meet your unique needs.
         </p>
-        <a href="/#contact-form" 
+        <a href="/#contact-form"
           className="inline-flex items-center space-x-2 
-          mr-2 max-[423px]:mb-3 
+          mr-2 max-[423px]:mb-3 max-[423px]:justify-center max-[423px]:w-[230px] max-[423px]:mr-0   
           bg-transparent border border-white px-6 py-3 
           text-white rounded-lg font-medium transition-all duration-300 ease-out
           hover:bg-white hover:text-red-500 hover:border-red-500
@@ -107,7 +107,7 @@ export default function Hero() {
               });
             }
           }}
-          className="inline-flex items-center space-x-2 bg-red-500 ml-2  text-white border border-red-500 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all transform uppercase tracking-wide font-sans"
+          className="inline-flex items-center space-x-2 bg-red-500  text-white border border-red-500 px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all transform uppercase tracking-wide font-sans"
         >
           <span>See What We've Built</span>
           <svg
@@ -124,7 +124,7 @@ export default function Hero() {
             />
           </svg>
         </a>
-        
+
       </div>
     </section>
   );

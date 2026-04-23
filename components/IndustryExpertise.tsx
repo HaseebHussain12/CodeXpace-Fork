@@ -90,7 +90,7 @@ export default function IndustryExpertise() {
   return (
     <section className="pt-6 pb-20 bg-black relative" style={{ overflowX: 'hidden', overflowY: 'visible' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
           Where We Exceed{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Customers' Expectations
@@ -105,30 +105,29 @@ export default function IndustryExpertise() {
               <div
                 key={index}
                 ref={(el: any) => (itemRefs.current[index] = el)}
-                className={`flex flex-col ${
-                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-12`}
+                className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } items-center gap-12`}
               >
                 <div className="flex-1">
                   <div className="relative">
                     <div
-                      className={`absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl z-[1] shadow-lg shadow-red-500/30 transition-all duration-700 ${
-                        isVisible
-                          ? "opacity-100 scale-100 rotate-0"
-                          : "opacity-0 scale-0 rotate-180"
-                      }`}
+                      className={`absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl z-[1] shadow-lg shadow-red-500/30 transition-all duration-700 ${isVisible
+                        ? "opacity-100 scale-100 rotate-0"
+                        : "opacity-0 scale-0 rotate-180"
+                        }`}
                     >
                       {industry.number}
                     </div>
                     <div
-                      className={`overflow-hidden aspect-video relative transition-opacity duration-700 ${
-                        isVisible ? "opacity-100" : "opacity-0"
-                      }`}
+                      className={`overflow-hidden aspect-video relative transition-opacity duration-700 ${isVisible ? "opacity-100" : "opacity-0"
+                        }`}
                       style={{
-                        width: "480px", // custom width
-                        height: "290px" // custom height - increased
+                        width: "100%",
+                        maxWidth: "480px", // custom width
+                        // height: "290px" // custom height - increased
                         // objectFit: "cover"
-                      }}
+                      }
+                      }
                     >
                       <Image
                         src={industry.image}
@@ -167,18 +166,16 @@ export default function IndustryExpertise() {
                   </div>
                 </div>
                 <div
-                  className={`flex-1 transition-opacity duration-700 ${
-                    isVisible ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`flex-1 transition-opacity duration-700 ${isVisible ? "opacity-100" : "opacity-0"
+                    }`}
                   style={{
                     minHeight: "200px" // Prevent layout shift
                   }}
                 >
-                  <h3 className="text-3xl font-bold text-white mb-5 px-4 py-2 w-fit
-                  ">
+                  <h3 className="text-3xl font-bold text-white mb-5 px-4 py-2 pl-0 w-fit max-[580px]:text-[25px]">
                     {industry.title}
                   </h3>
-                  <p className="text-gray-400 text-lg leading-relaxed">
+                  <p className="text-gray-400 text-lg leading-relaxed max-[580px]:text-[15px]">
                     {industry.description}
                   </p>
                 </div>
