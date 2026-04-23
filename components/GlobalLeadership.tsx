@@ -99,12 +99,12 @@ function GlobalLeadership() {
                   width: `calc((100% - ${(cardsToShow - 1) * GAP}px) / ${cardsToShow})`
                 }}
               >
-                {/* IMAGE FIX (Fixed Height + Top Crop for no awkward cuts on mobile) */}
+
                 <div className="relative w-full h-[380px] sm:h-[380px] lg:h-[400px] overflow-hidden bg-black/20">
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className="w-full h-full object-cover object-[center_top] transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-[center_top]"
                   />
                 </div>
 

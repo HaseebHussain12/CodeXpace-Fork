@@ -232,9 +232,8 @@ export default function ServiceFAQs({ slug }: ServiceFAQsProps) {
                 <span className="text-lg font-semibold text-white pr-4">{faq.question}</span>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-6 h-6 text-red-500 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-45' : ''
-                    }`}
+                    className={`w-6 h-6 text-red-500 transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -245,7 +244,7 @@ export default function ServiceFAQs({ slug }: ServiceFAQsProps) {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-base text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-base text-gray-300 leading-relaxed max-[580px]:text-[15px]">{faq.answer}</p>
                 </div>
               )}
             </div>
