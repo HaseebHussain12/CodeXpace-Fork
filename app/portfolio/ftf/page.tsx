@@ -12,7 +12,7 @@ import img2 from "../../../assets/portfolio/ftf/two.png";
 import img3 from "../../../assets/portfolio/ftf/three.png";
 import img4 from "../../../assets/portfolio/ftf/four.png";
 import img5 from "../../../assets/portfolio/ftf/five.png";
-import img1Light from "../../../assets/portfolio/ftf/img-one-Light.png";
+import img1Light from "../../../assets/portfolio/ftf/1-Light.png";
 import img2Light from "../../../assets/portfolio/ftf/img-two-Light.png";
 import img3Light from "../../../assets/portfolio/ftf/img-three-Light.png";
 import img4Light from "../../../assets/portfolio/ftf/img-four-Light.png";

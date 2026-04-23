@@ -131,7 +131,7 @@ export default function ContactForm() {
                   className="w-full bg-black/40 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-red-500"
                 />
               </div>
-              <div>
+              {/* <div>
                 <textarea
                   name="message"
                   placeholder="Please describe what you need?*"
@@ -141,7 +141,7 @@ export default function ContactForm() {
                   rows={4}
                   className="w-full bg-black/40 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-red-500 resize-none"
                 ></textarea>
-              </div>
+              </div> */}
               <button
                 type="submit"
                 className="w-fit bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2.5 rounded-lg font-semibold text-sm shadow-lg shadow-red-500/20 flex items-center justify-center space-x-2"
