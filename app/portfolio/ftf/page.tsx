@@ -7,15 +7,15 @@ import logo from "../../../assets/portfolio/ftf/darkLogo.png";
 import logoLight from "../../../assets/portfolio/ftf/lightLogo.png";
 import backgroundImage from "../../../assets/portfolio/ftf/back.png";
 import backgroundImageLight from "../../../assets/portfolio/ftf/backLight.png";
-import img1 from "../../../assets/portfolio/ftf/1.PNG";
-import img2 from "../../../assets/portfolio/ftf/2.PNG";
-import img3 from "../../../assets/portfolio/ftf/3.PNG";
-import img4 from "../../../assets/portfolio/ftf/4.PNG";
-import img5 from "../../../assets/portfolio/ftf/5.PNG";
-import img1Light from "../../../assets/portfolio/ftf/1-Light.PNG";
-import img2Light from "../../../assets/portfolio/ftf/2-Light.PNG";
+import img1 from "../../../assets/portfolio/ftf/1.png";
+import img2 from "../../../assets/portfolio/ftf/2.png";
+import img3 from "../../../assets/portfolio/ftf/3.png";
+import img4 from "../../../assets/portfolio/ftf/4.png";
+import img5 from "../../../assets/portfolio/ftf/5.png";
+import img1Light from "../../../assets/portfolio/ftf/1-Light.png";
+import img2Light from "../../../assets/portfolio/ftf/2-Light.png";
 import img3Light from "../../../assets/portfolio/ftf/3-Light.png";
-import img4Light from "../../../assets/portfolio/ftf/4-Light.PNG";
+import img4Light from "../../../assets/portfolio/ftf/4-Light.png";
 import img5Light from "../../../assets/portfolio/ftf/5-Light.png";
 
 export default function FTFPortfolio() {
@@ -287,9 +287,8 @@ export default function FTFPortfolio() {
       <div
         className={`app ${isLightMode ? "light-mode" : ""}`}
         style={{
-          backgroundImage: `url(${
-            isLightMode ? backgroundImageLight.src : backgroundImage.src
-          })`
+          backgroundImage: `url(${isLightMode ? backgroundImageLight.src : backgroundImage.src
+            })`
         }}
       >
         {/* Theme Toggle Button */}
