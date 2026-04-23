@@ -7,16 +7,16 @@ import logo from "../../../assets/portfolio/ftf/darkLogo.png";
 import logoLight from "../../../assets/portfolio/ftf/lightLogo.png";
 import backgroundImage from "../../../assets/portfolio/ftf/back.png";
 import backgroundImageLight from "../../../assets/portfolio/ftf/backLight.png";
-import img1 from "../../../assets/portfolio/ftf/1.png";
-import img2 from "../../../assets/portfolio/ftf/2.png";
-import img3 from "../../../assets/portfolio/ftf/3.png";
-import img4 from "../../../assets/portfolio/ftf/4.png";
-import img5 from "../../../assets/portfolio/ftf/5.png";
-import img1Light from "../../../assets/portfolio/ftf/1-Light.png";
-import img2Light from "../../../assets/portfolio/ftf/2-Light.png";
-import img3Light from "../../../assets/portfolio/ftf/3-Light.png";
-import img4Light from "../../../assets/portfolio/ftf/4-Light.png";
-import img5Light from "../../../assets/portfolio/ftf/5-Light.png";
+import img1 from "../../../assets/portfolio/ftf/one.png";
+import img2 from "../../../assets/portfolio/ftf/two.png";
+import img3 from "../../../assets/portfolio/ftf/three.png";
+import img4 from "../../../assets/portfolio/ftf/four.png";
+import img5 from "../../../assets/portfolio/ftf/five.png";
+import img1Light from "../../../assets/portfolio/ftf/img-one-Light.png";
+import img2Light from "../../../assets/portfolio/ftf/img-two-Light.png";
+import img3Light from "../../../assets/portfolio/ftf/img-three-Light.png";
+import img4Light from "../../../assets/portfolio/ftf/img-four-Light.png";
+import img5Light from "../../../assets/portfolio/ftf/img-five-Light.png";
 
 export default function FTFPortfolio() {
   const [isLightMode, setIsLightMode] = useState(false);
