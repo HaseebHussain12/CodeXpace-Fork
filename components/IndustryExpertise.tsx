@@ -90,7 +90,7 @@ export default function IndustryExpertise() {
   return (
     <section className="pt-6 pb-20 bg-black relative" style={{ overflowX: 'hidden', overflowY: 'visible' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
           Where We Exceed{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Customers' Expectations

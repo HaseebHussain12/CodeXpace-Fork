@@ -157,7 +157,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 pt-[90px] bg-black relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
           Excellence - When it{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Comes
@@ -170,8 +170,8 @@ export default function Services() {
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
               className={`group relative overflow-hidden bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
                 }`}
               style={{
                 backgroundImage: `url(${service.image})`,

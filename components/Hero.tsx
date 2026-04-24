@@ -70,7 +70,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight flex items-baseline justify-center flex-wrap gap-3 md:gap-4 lg:gap-5">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight flex items-baseline justify-center flex-wrap gap-3 md:gap-4 lg:gap-5">
           <span className="text-white">Bridging.</span>
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent inline-block min-w-[150px] md:min-w-[200px] lg:min-w-[250px] text-left">
             {currentText}

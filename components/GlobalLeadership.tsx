@@ -73,9 +73,9 @@ function GlobalLeadership() {
 
   return (
     <section className="relative w-full py-16 bg-black overflow-hidden">
-      <div className="relative max-w-[1400px] mx-auto px-4 md:px-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
           Our Global{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Leadership

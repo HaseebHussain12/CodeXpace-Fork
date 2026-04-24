@@ -63,10 +63,10 @@ export default function AboutCompany() {
 
   return (
     <section ref={sectionRef} className="py-14 md:py-20 lg:py-24 bg-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Title */}
-        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-14 lg:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 md:mb-14 lg:mb-16">
           Why Partner with{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             CodeXpace

@@ -136,8 +136,8 @@ export default function LatestProjects() {
 
   return (
     <section className="pt-12 pb-0 bg-black">
-      <div className="max-w-7xl mx-auto px-4 relative">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">
           Latest{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Projects
@@ -194,7 +194,7 @@ export default function LatestProjects() {
         </div>
 
         {/* ARROWS */}
-        <div className="absolute top-1/2 left-[-50px] right-[-50px] max-[1400px]:left-[0px] max-[1400px]:right-[0px] -translate-y-1/2 flex justify-between px-2 pointer-events-none">
+        <div className="absolute top-1/2 left-[0px] right-[0px] -translate-y-1/2 flex justify-between px-2 pointer-events-none">
           <button
             onClick={() => paginate(-1)}
             disabled={page === 0}
