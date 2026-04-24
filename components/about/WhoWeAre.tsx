@@ -29,8 +29,8 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <section className="py-20 max-[768px]:py-0 bg-black relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+    <section className="py-20 pt-0 max-[768px]:py-0 bg-black relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
           className="bg-black/60 backdrop-blur-xl border border-red-500/30 rounded-2xl p-8 md:p-12"

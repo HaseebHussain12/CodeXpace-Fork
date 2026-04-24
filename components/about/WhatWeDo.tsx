@@ -155,14 +155,13 @@ export default function Services() {
   }, [showAll]);
 
   return (
-    <section id="services" className="py-20 pt-[90px] bg-black relative">
+    <section id="services" className="py-20 pt-[70px] bg-black relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
-          Excellence - When it{" "}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 max-[580px]:text-[30px]">
+          What We{" "}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
-            Comes
+            Do
           </span>{" "}
-          to
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedServices.map((service, index) => (
@@ -170,8 +169,8 @@ export default function Services() {
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
               className={`group relative overflow-hidden bg-black border border-red-500/40 rounded-xl p-6 hover:border-red-500/70 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
                 }`}
               style={{
                 backgroundImage: `url(${service.image})`,

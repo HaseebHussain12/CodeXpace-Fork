@@ -12,7 +12,7 @@ export default function AwardsSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* heading */}
-        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4 md:mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-4 md:mb-6">
           <span className="text-white">Awards &</span>{' '}
           <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent">
             Recognition

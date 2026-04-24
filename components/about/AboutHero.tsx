@@ -54,7 +54,7 @@ export default function AboutHero() {
       {/* Content */}
       <div ref={ref} className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-[580px]:text-[30px] leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 max-[580px]:text-[30px] leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
           <span className="text-white">From Concept to</span>{' '}
