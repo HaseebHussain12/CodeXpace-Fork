@@ -20,8 +20,7 @@ export default function AwardsSection() {
         </h2>
 
         <p className="text-gray-400 text-center max-w-3xl mx-auto mb-10 md:mb-16 text-sm sm:text-base">
-          At DevsOrb, recognition reflects the trust our clients place in us and the value we deliver through technology.
-          Our dedication to innovation, quality, and client success has been acknowledged by industry leaders and global platforms.
+          At CodeXpace, recognition is rooted in the trust of our global clients and the consistent impact of our technology solutions. Our commitment to innovation, engineering excellence, and measurable client success continues to be reflected across engagements worldwide.
         </p>
 
         {/* cards */}
@@ -35,10 +34,10 @@ export default function AwardsSection() {
               </svg>
             </div>
             <h3 className="text-white text-lg md:text-xl font-semibold mb-3 md:mb-4">
-              Top Software Development Company 2025
+              Leading Software Development Company – 2025
             </h3>
             <p className="text-gray-400 text-sm">
-              Recognized by leading tech directories for consistent delivery of high-quality custom software solutions.
+              Honored by leading tech directories for a proven track record of delivering innovative, high-quality software solutions that enable business growth and digital transformation.
             </p>
           </div>
 
@@ -50,10 +49,10 @@ export default function AwardsSection() {
               </svg>
             </div>
             <h3 className="text-white text-lg md:text-xl font-semibold mb-3 md:mb-4">
-              Clutch Leader in AI and Blockchain Development
+              Clutch Leader in Advanced Software Development
             </h3>
             <p className="text-gray-400 text-sm">
-              Acknowledged as a top provider for emerging technology projects, including AI-powered platforms and blockchain solutions.
+              Recognized on Clutch for engineering secure, scalable, and high-impact solutions across AI, blockchain, cloud platforms, and enterprise-grade applications.
             </p>
           </div>
 
@@ -68,7 +67,7 @@ export default function AwardsSection() {
               Trusted by Global Clients
             </h3>
             <p className="text-gray-400 text-sm">
-              Featured in international case studies for helping businesses scale with reliable engineering teams.
+              Proven across global engagements, supporting enterprises with reliable engineering teams that accelerate product delivery and scale operations.
             </p>
           </div>
 

@@ -49,14 +49,15 @@ export default function WhoWeAre() {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p className="text-base md:text-lg max-[580px]:text-[15px]">
-                  CodeXpace is a leading software development company dedicated to transforming ideas into powerful digital solutions. We specialize in creating custom software that drives innovation and business growth.
+                  CodeXpace is a forward-thinking software development company dedicated to transforming ideas into scalable, high-impact digital solutions. We partner with organizations globally to build technology that not only solves complex challenges but also drives measurable growth and long-term business value.
                 </p>
                 <p className="text-base md:text-lg max-[580px]:text-[15px]">
-                  Our expertise spans across frontend and backend development, mobile applications, artificial intelligence, blockchain technology, DevOps, and quality assurance. We bring together a team of skilled engineers, creative designers, and strategic thinkers who are passionate about delivering excellence.
+                  Our expertise spans the full spectrum of modern development, including frontend and backend engineering, mobile application development, artificial intelligence, blockchain solutions, DevOps, and quality assurance. With a strong foundation in AI-driven systems, we enable businesses to harness the power of data, automate intelligent workflows, and unlock new opportunities for innovation and efficiency.
                 </p>
                 <p className="text-base md:text-lg max-[580px]:text-[15px]">
-                  With years of experience and a client-centric approach, we've helped numerous businesses scale their operations, streamline processes, and achieve their digital transformation goals.
+                  At CodeXpace, our strength lies in our people—a team of experienced engineers, creative designers, and strategic thinkers committed to delivering excellence at every stage. We take a collaborative, client-centric approach, ensuring that every solution is aligned with business objectives, technically robust, and built for scale.
                 </p>
+                <p className="text-base md:text-lg max-[580px]:text-[15px]">As a globally trusted technology partner, we have helped organizations streamline operations, accelerate digital transformation, and stay ahead in an increasingly competitive landscape. We don’t just build software—we deliver intelligent, future-ready solutions that create lasting impact.</p>
               </div>
             </div>
 
