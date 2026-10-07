@@ -29,7 +29,7 @@ export default function AboutHero() {
 
   return (
     <section className="relative min-h-[60vh] max-[768px]:min-h-[40vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 bg-black">
         <div
           className="absolute inset-0"
